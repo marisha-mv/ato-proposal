@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Takeover - Conversion Optimization Proposal | WeConquer Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --red: #FF0000;
+            --gray-light: #F5F5F5;
+            --gray-dark: #1A1A1A;
+            --gray-medium: #666666;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: clamp(1.25rem, 2vw, 1.75rem);
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .big-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 8vw, 8rem);
+            line-height: 0.9;
+            color: var(--red);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--black);
+            color: var(--white);
+            padding: 8rem 0 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: var(--red);
+            opacity: 0.1;
+            transform: skewX(-15deg);
+            transform-origin: top right;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .hero-meta span {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-meta strong {
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.25rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-dark {
+            background: var(--gray-dark);
+            color: var(--white);
+        }
+
+        .section-light {
+            background: var(--gray-light);
+        }
+
+        .section-accent {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: var(--black);
+            color: var(--white);
+            padding: 0.375rem 1rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-accent .section-label {
+            background: var(--white);
+            color: var(--red);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 2rem;
+            border-left: 4px solid var(--red);
+        }
+
+        .section-dark .stat-card {
+            background: var(--black);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray-medium);
+        }
+
+        .section-dark .stat-label {
+            color: var(--gray-light);
+        }
+
+        /* Problem Cards */
+        .problem-cards {
+            display: grid;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .problem-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border: 2px solid var(--gray-light);
+            position: relative;
+        }
+
+        .problem-card.critical {
+            border-color: var(--red);
+            background: #FFF5F5;
+        }
+
+        .problem-number {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: var(--gray-light);
+            line-height: 1;
+        }
+
+        .problem-card.critical .problem-number {
+            color: rgba(255, 0, 0, 0.1);
+        }
+
+        .priority-badge {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        /* Solution Grid */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .solution-card {
+            background: var(--white);
+            padding: 2rem;
+            border-top: 4px solid var(--black);
+        }
+
+        .section-dark .solution-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-top-color: var(--red);
+        }
+
+        .solution-card h4 {
+            margin-top: 1rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 3rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--red);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: var(--red);
+            border-radius: 50%;
+        }
+
+        .timeline-week {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--red);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Table */
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+
+        thead {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        tbody tr:hover {
+            background: var(--gray-light);
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: var(--black);
+            color: var(--white);
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-box .big-number {
+            display: block;
+            margin: 1rem 0;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: var(--gray-light);
+            padding: 2rem;
+            border-left: 4px solid var(--red);
+            margin: 2rem 0;
+        }
+
+        .highlight-box strong {
+            color: var(--red);
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            color: var(--red);
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+
+        .crosslist {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .crosslist li::before {
+            content: '✗';
+            color: var(--red);
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+
+        /* Quote/Callout */
+        .callout {
+            background: var(--red);
+            color: var(--white);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .proposal-footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .signature-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .signature {
+            padding: 2rem;
+            border: 2px solid var(--gray-dark);
+        }
+
+        .signature-line {
+            border-top: 2px solid var(--white);
+            margin: 2rem 0 0.5rem;
+            padding-top: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 6rem 0 4rem;
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .stats-grid,
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-item::before {
+                left: -2.5rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .hero {
+                padding: 4rem 0;
+                break-after: page;
+            }
+
+            section {
+                break-inside: avoid;
+                padding: 2rem 0;
+            }
+
+            .problem-card,
+            .solution-card {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label">CONVERSION OPTIMIZATION PROPOSAL</div>
+                <h1>Affiliate Takeover:<br>Fix The Funnel,<br>Close The Sales</h1>
+                <p style="font-size: 1.5rem; opacity: 0.9; max-width: 800px;">We're driving 13,697 clicks at $0.03-$0.18 CPC. Zero conversions. The problem isn't traffic—it's the website. Here's how we fix it.</p>
+                <div class="hero-meta">
+                    <span>
+                        <strong>Prepared By</strong>
+                        WeConquer Media
+                    </span>
+                    <span>
+                        <strong>Date</strong>
+                        December 24, 2024
+                    </span>
+                    <span>
+                        <strong>Client</strong>
+                        Affiliate Takeover Miami 2026
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Executive Summary -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Executive Summary</div>
+                <h2>The Numbers Don't Lie</h2>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">13,697</div>
+                    <div class="stat-label">Link Clicks Delivered</div>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">✓ Excellent traffic quality</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$0.03-0.18</div>
+                    <div class="stat-label">Cost Per Click</div>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">✓ Highly efficient spend</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">0.51-4.85%</div>
+                    <div class="stat-label">Click-Through Rate</div>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">✓ Strong creative performance</p>
+                </div>
+                <div class="stat-card" style="border-left-color: var(--black);">
+                    <div class="stat-value" style="color: var(--black);">0</div>
+                    <div class="stat-label" style="color: var(--red);">Conversions / Tickets Sold</div>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">✗ Website is the bottleneck</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>The Critical Problem:</h4>
+                <p style="margin: 0;"><strong>Only 197 of 13,697 clicks (1.4%) reached your landing page.</strong> That's an 85.6% bounce rate before the page even loads—indicating severe page speed issues. Industry standard is 20-30%.</p>
+            </div>
+
+            <div class="callout">
+                "We're paying $13.22 for each person who actually sees your page instead of $0.65. That's 20X more expensive than it should be. Fix the page speed, add clear pricing and urgency, and this same traffic converts at 3-5%—that's 120-300 tickets from the same $2,604 spend."
+            </div>
+        </div>
+    </section>
+
+    <!-- The Smoking Gun -->
+    <section class="section-accent">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Data</div>
+                <h2>85.6% Bounce Rate = Catastrophic Page Load Problem</h2>
+            </div>
+
+            <div class="big-number" style="margin: 2rem 0;">$2,200</div>
+            <p style="font-size: 1.5rem; margin-bottom: 2rem;">Out of $2,604 spent is wasted on people who bounce before seeing your page.</p>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; margin: 2rem 0;">
+                <h3 style="color: var(--white); margin-bottom: 1rem;">What's Happening:</h3>
+                <ol style="color: var(--white); font-size: 1.25rem;">
+                    <li>User clicks ad on mobile</li>
+                    <li>Page takes 6-8 seconds to load (estimated from drop-off rate)</li>
+                    <li>User gives up and closes tab</li>
+                    <li>You just paid $0.13 for nothing</li>
+                </ol>
+            </div>
+
+            <p style="font-size: 1.25rem; font-weight: 600;">Fix page speed to <3 seconds → Recover 60% of lost traffic → 8,000+ additional landing page views from same ad spend</p>
+        </div>
+    </section>
+
+    <!-- Critical Issues -->
+    <section class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Issues Blocking Conversions</div>
+                <h2>What's Wrong & Why It Matters</h2>
+            </div>
+
+            <div class="problem-cards">
+                <div class="problem-card critical">
+                    <span class="problem-number">1</span>
+                    <div class="priority-badge">🚨 Critical</div>
+                    <h3>Catastrophic Page Load Problem</h3>
+                    <p><strong>The Data:</strong> 13,697 clicks → 197 landing page views = 85.6% drop-off before page loads</p>
+                    <p><strong>Root Causes:</strong> Heavy background images/patterns, unoptimized assets, too many scripts loading before content renders, poor mobile performance</p>
+                    <p style="color: var(--red); font-weight: 600; margin-top: 1rem;">This is the #1 conversion killer. Even a perfect landing page can't convert visitors who never see it.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">2</span>
+                    <h3>No Pricing Transparency</h3>
+                    <p>Visitors cannot see ticket prices anywhere on homepage. They must navigate through multiple pages to find vague "buy tickets" CTAs with no pricing.</p>
+                    <p><strong>Impact:</strong> Massive drop-off. Conference tickets typically range $500-$2,000. Without transparency, prospects assume the worst or leave.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">3</span>
+                    <h3>Weak Value Proposition</h3>
+                    <p><strong>Current:</strong> "The New White-Hat Era of Affiliate Marketing" (positioning, not benefit)</p>
+                    <p><strong>Needed:</strong> "Connect with 200+ affiliates doing $100K-$1M/month and close partnership deals in 48 hours"</p>
+                    <p><strong>Missing:</strong> No specific networking outcomes, no ROI framework, no clear answer to "What will I gain?"</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">4</span>
+                    <h3>Poor Visual Hierarchy & Readability</h3>
+                    <p>Low contrast between text and background patterns, decorative elements competing with key information, difficult to scan, colors create visual fatigue.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">5</span>
+                    <h3>No Dedicated Urgency Landing Page</h3>
+                    <p>Countdown timer on homepage doesn't drive action because no clear before/after pricing shown, no scarcity messaging, timer just counts to event date not price increase.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">6</span>
+                    <h3>Confusing Checkout Flow</h3>
+                    <p>Multiple CTAs competing (Miami vs Barcelona), unclear ticket types, form friction causing cart abandonment and decision paralysis.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">7</span>
+                    <h3>Generic Social Proof</h3>
+                    <p>Logo carousel without context (Meta, TikTok logos mean nothing without "500 employees from these companies attended"). No specific outcomes in testimonials.</p>
+                    <p><strong>What converts:</strong> "127 partnerships worth $8.2M formed at ATO Barcelona 2025"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Solution</div>
+                <h2 style="color: var(--white);">Two-Track Approach: Shared Accountability</h2>
+            </div>
+
+            <h3 style="color: var(--red); margin-top: 3rem;">Track 1: ATO Team Responsibilities (Website & Funnel)</h3>
+
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">⚡</div>
+                    <h4>Fix Page Speed</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Remove heavy background patterns</li>
+                        <li>Compress all images</li>
+                        <li>Defer non-critical JavaScript</li>
+                        <li>Implement lazy loading</li>
+                        <li>Enable CDN & caching</li>
+                    </ul>
+                    <p style="margin-top: 1rem; color: var(--red); font-weight: 600;">Target: <3 second load time</p>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">🎯</div>
+                    <h4>Create Early Bird Landing Page</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Pricing table immediately visible</li>
+                        <li>Countdown to price increase</li>
+                        <li>Clear value stack with numbers</li>
+                        <li>Specific social proof</li>
+                        <li>Simplified checkout</li>
+                    </ul>
+                    <p style="margin-top: 1rem; color: var(--red); font-weight: 600;">Target: 3% conversion rate</p>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">📱</div>
+                    <h4>Fix Visual Design</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>High contrast text (4.5:1 ratio min)</li>
+                        <li>Remove pattern overlays</li>
+                        <li>Simplify color palette</li>
+                        <li>Large, contrasting CTA buttons</li>
+                        <li>Mobile-first approach</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">🛒</div>
+                    <h4>Simplify Checkout</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Single-page checkout (max 2 steps)</li>
+                        <li>Guest checkout option</li>
+                        <li>Clear ticket type selection</li>
+                        <li>Payment plan options</li>
+                        <li>Reduce form friction</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: var(--red); margin-top: 4rem;">Track 2: WeConquer Media Responsibilities (Traffic & Creative)</h3>
+
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">🎨</div>
+                    <h4>Ad Creative Overhaul</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>15 outcome-focused ad variations</li>
+                        <li>Testimonial videos (15-30 sec)</li>
+                        <li>Urgency + FOMO messaging</li>
+                        <li>Speaker credibility highlights</li>
+                        <li>Specific social proof</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">🎯</div>
+                    <h4>Campaign Restructure</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Early Bird urgency campaign</li>
+                        <li>Audience-specific targeting</li>
+                        <li>Aggressive retargeting setup</li>
+                        <li>Ad-to-page matching</li>
+                        <li>UTM tracking implementation</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">⚡</div>
+                    <h4>Performance Monitoring</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Real-time campaign dashboards</li>
+                        <li>Weekly performance reports</li>
+                        <li>Conversion tracking & analytics</li>
+                        <li>Budget pacing & optimization</li>
+                        <li>Rapid issue escalation</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">🔄</div>
+                    <h4>Optimization & Scaling</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Audience refinement</li>
+                        <li>Creative A/B testing</li>
+                        <li>Retargeting strategy</li>
+                        <li>Performance monitoring</li>
+                        <li>Budget scaling plan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Implementation Timeline</div>
+                <h2>4-Week Roadmap to Results</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 1: Dec 26 - Jan 1</div>
+                    <h4>Foundation & Emergency Fixes</h4>
+                    <ul class="checklist">
+                        <li>Proposal approval & resource allocation (Dec 26)</li>
+                        <li>Page speed optimization complete (Dec 28)</li>
+                        <li>Visual/readability fixes complete (Dec 28)</li>
+                        <li>Early Bird landing page built (Dec 30)</li>
+                        <li>Ad creative production complete (Dec 30)</li>
+                        <li>New landing page live (Dec 31)</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 600;">Expected Impact: LP view rate jumps from 1.4% to 30%+</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 2: Jan 2-8</div>
+                    <h4>Soft Launch & Optimization</h4>
+                    <ul class="checklist">
+                        <li>New campaigns launch at 50% budget (Jan 2)</li>
+                        <li>Monitor & fix technical issues (Jan 2-3)</li>
+                        <li>Scale to 100% budget (Jan 4)</li>
+                        <li>Begin A/B testing LP variations (Jan 5)</li>
+                        <li>Retargeting campaigns active (Jan 5)</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 600;">Goal: Sell 100-150 tickets, validate conversion funnel working</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 3: Jan 9-15</div>
+                    <h4>Peak Early Bird Push</h4>
+                    <ul class="checklist">
+                        <li>Maximum urgency messaging</li>
+                        <li>Increased retargeting frequency</li>
+                        <li>Daily performance reviews</li>
+                        <li>Scarcity updates ("Only X tickets left")</li>
+                        <li>Final push before Jan 15 deadline</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 600;">Goal: Sell remaining 150-200 tickets, hit 300 Early Bird target</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 4+: Jan 16 - Event</div>
+                    <h4>Standard Pricing & Sustained Growth</h4>
+                    <ul class="checklist">
+                        <li>Transition to Standard pricing ($997)</li>
+                        <li>Heavy retargeting of warm audiences</li>
+                        <li>Consistent drip campaign</li>
+                        <li>Maintain 100-150 tickets/month</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 600;">Goal: Consistent ticket sales through March 18</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accountability -->
+    <section class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Accountability Framework</div>
+                <h2>Clear Ownership, Measurable Results</h2>
+            </div>
+
+            <h3 style="margin-top: 2rem;">ATO Team Deliverables</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Deliverable</th>
+                            <th>Deadline</th>
+                            <th>Success Metric</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Early Bird landing page live</td>
+                            <td>Jan 3</td>
+                            <td>LP exists, pricing visible above fold</td>
+                        </tr>
+                        <tr>
+                            <td>Visual/readability fixes implemented</td>
+                            <td>Jan 3</td>
+                            <td>Contrast ratio >4.5:1, patterns removed</td>
+                        </tr>
+                        <tr>
+                            <td>Page speed optimization</td>
+                            <td>Jan 6</td>
+                            <td>PageSpeed score >80, <3 sec load time</td>
+                        </tr>
+                        <tr>
+                            <td>Simplified checkout flow</td>
+                            <td>Jan 8</td>
+                            <td><2 steps, guest checkout enabled</td>
+                        </tr>
+                        <tr>
+                            <td>Exit-intent popup</td>
+                            <td>Jan 10</td>
+                            <td>Popup triggers, email capture working</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top: 1rem;"><strong>Minimum Performance Target:</strong> Landing page conversion rate of 3% (industry standard: 2-4%)</p>
+
+            <h3 style="margin-top: 3rem;">WeConquer Media Deliverables</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Deliverable</th>
+                            <th>Deadline</th>
+                            <th>Success Metric</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>New ad creative (15 variations)</td>
+                            <td>Jan 3</td>
+                            <td>Ads approved and in review</td>
+                        </tr>
+                        <tr>
+                            <td>Campaign restructure</td>
+                            <td>Jan 4</td>
+                            <td>New campaigns live and delivering</td>
+                        </tr>
+                        <tr>
+                            <td>Retargeting campaigns launched</td>
+                            <td>Jan 5</td>
+                            <td>Pixels firing, audiences building</td>
+                        </tr>
+                        <tr>
+                            <td>Performance monitoring dashboard</td>
+                            <td>Jan 5</td>
+                            <td>Real-time tracking active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top: 1rem;"><strong>Minimum Performance Target:</strong> Maintain 2%+ CTR, keep CPC below current benchmarks, deliver 30%+ LP view rate</p>
+
+            <p style="margin-top: 2rem; padding: 1.5rem; background: var(--gray-light); border-left: 4px solid var(--black);"><strong>Note on Scope:</strong> WeConquer is responsible for ad creative, media buying, and traffic delivery only. All landing page copy, design, and website optimization is ATO's responsibility. Website copywriting services are available as a separate paid engagement.</p>
+
+            <div class="highlight-box" style="margin-top: 3rem;">
+                <h4>The Harsh Truth: Who Owns What</h4>
+                <p><strong style="color: var(--red);">If conversions don't improve after ATO fixes:</strong> It's on WeConquer. If the landing page converts at 3%+ but we're not driving quality traffic, we own that problem.</p>
+                <p><strong style="color: var(--red);">If conversions don't improve after WeConquer fixes:</strong> It's on ATO. If we're driving 2%+ CTR with quality traffic to a fast-loading, clear LP and it's still not converting, ATO needs to address pricing, value proposition, or product-market fit.</p>
+                <p><strong>Shared Responsibility:</strong> Weekly conversion analysis calls, real-time dashboard access, transparent data sharing, rapid testing and iteration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Projection -->
+    <section class="section-accent">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">ROI Projection</div>
+                <h2 style="color: var(--white);">Early Bird Period: 300 Tickets in 15 Days</h2>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.3); padding: 2.5rem; margin: 2rem 0; border: 2px solid var(--white);">
+                <h3 style="color: var(--white); margin-bottom: 1.5rem;">Recommended Budget: $1,500/Day (Jan 1-15)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; color: var(--white);">
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem;">$22,500</div>
+                        <div>Total Early Bird spend (15 days)</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem;">225,000</div>
+                        <div>Clicks at $0.10 CPC</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem;">67,500</div>
+                        <div>LP views (30% rate after fixes)</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--black);">0.44%</div>
+                        <div>LP CVR needed for 300 tickets</div>
+                        <div style="margin-top: 0.5rem; font-size: 0.875rem; opacity: 0.8;">Industry standard: 2-4%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 2.5rem; margin: 2rem 0;">
+                <h3 style="color: var(--white); margin-bottom: 1.5rem;">Conservative Scenario (0.5% LP Conversion)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; color: var(--white);">
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem;">338</div>
+                        <div>Tickets sold (exceeds target)</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--black);">$269,386</div>
+                        <div>Revenue at $797/ticket</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--black);">12:1</div>
+                        <div>Return on Ad Spend</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.15); padding: 2.5rem; margin: 2rem 0;">
+                <h3 style="color: var(--white); margin-bottom: 1.5rem;">Realistic Scenario (1% LP Conversion)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; color: var(--white);">
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem;">675</div>
+                        <div>Tickets sold (2.25x target)</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--black);">$538,000</div>
+                        <div>Revenue at $797/ticket</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--black);">24:1</div>
+                        <div>Return on Ad Spend</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.2); padding: 2.5rem; margin: 2rem 0;">
+                <h3 style="color: var(--white); margin-bottom: 1.5rem;">Industry Standard Scenario (2% LP Conversion)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; color: var(--white);">
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem;">1,350</div>
+                        <div>Tickets sold (4.5x target)</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--black);">$1,076,000</div>
+                        <div>Revenue at $797/ticket</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--black);">48:1</div>
+                        <div>Return on Ad Spend</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: var(--black); padding: 2rem; margin: 3rem 0;">
+                <h4 style="color: var(--white); margin-bottom: 1rem;">Budget Recommendation:</h4>
+                <p style="font-size: 1.25rem; color: var(--white); margin: 0;">Increase daily spend from $867 to <strong>$1,500/day during Early Bird period</strong> (Jan 1-15) to build momentum and maximize early conversions. Scale back to $800-1,000/day for Standard pricing period (Jan 16+).</p>
+            </div>
+
+            <p style="font-size: 1.125rem; margin-top: 2rem; color: var(--white);">*All scenarios assume page speed fixes recover LP view rate from 1.4% to 30%. Current state: 0 conversions, burning $867/day with 85.6% bounce rate.</p>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Next Steps</div>
+                <h2>Let's Get This Done</h2>
+            </div>
+
+            <div class="cta-box">
+                <h3 style="color: var(--white);">Current Reality</h3>
+                <div class="big-number">$867/day</div>
+                <p style="font-size: 1.25rem; margin: 1rem 0;">Getting 0 conversions. Burning money.</p>
+            </div>
+
+            <div style="text-align: center; margin: 2rem 0; font-size: 3rem; color: var(--red);">
+                ↓
+            </div>
+
+            <div class="cta-box" style="background: var(--red);">
+                <h3 style="color: var(--white);">After Fixes</h3>
+                <div class="big-number" style="color: var(--white);">$867/day</div>
+                <p style="font-size: 1.25rem; margin: 1rem 0;">Getting 30-120 conversions. Printing money.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 3rem;">
+                <h4>The Difference?</h4>
+                <ul class="checklist">
+                    <li>3 days of focused work</li>
+                    <li>Clear accountability</li>
+                    <li>Both teams executing</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 3rem;">Immediate Actions Required from ATO:</h3>
+            <ol>
+                <li>Approve this proposal</li>
+                <li>Assign dev/design resources with specific availability</li>
+                <li>Confirm Early Bird ticket allocation (recommended: 300 tickets)</li>
+                <li>Grant WeConquer access to Google Analytics 4, heatmap tools (if existing), staging environment</li>
+            </ol>
+
+            <h3 style="margin-top: 2rem;">Immediate Actions from WeConquer:</h3>
+            <ol>
+                <li>Begin ad creative production (15 variations)</li>
+                <li>Prepare campaign structure for $1,500/day budget</li>
+                <li>Set up retargeting audiences</li>
+                <li>Configure performance tracking dashboard</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Signature -->
+    <div class="proposal-footer">
+        <div class="container">
+            <h2 style="color: var(--white); margin-bottom: 2rem;">Proposal Acceptance</h2>
+            <p style="color: var(--gray-light); margin-bottom: 3rem;">By signing below, both parties commit to executing their respective responsibilities on time, transparent data sharing, weekly performance reviews, rapid iteration based on results, and shared accountability for outcomes.</p>
+
+            <div class="signature-box">
+                <div class="signature">
+                    <h4 style="color: var(--white);">WeConquer Media</h4>
+                    <div class="signature-line">
+                        <p style="color: var(--gray-light); font-size: 0.875rem; margin: 0;">Marisha Liyanage</p>
+                        <p style="color: var(--gray-light); font-size: 0.875rem; margin: 0;">Founder & CEO, WeConquer Media</p>
+                    </div>
+                    <p style="color: var(--gray-light); font-size: 0.875rem; margin-top: 1rem;">Date: _______________</p>
+                </div>
+
+                <div class="signature">
+                    <h4 style="color: var(--white);">Affiliate Takeover</h4>
+                    <div class="signature-line">
+                        <p style="color: var(--gray-light); font-size: 0.875rem; margin: 0;">[Representative Name]</p>
+                        <p style="color: var(--gray-light); font-size: 0.875rem; margin: 0;">[Title], Affiliate Takeover</p>
+                    </div>
+                    <p style="color: var(--gray-light); font-size: 0.875rem; margin-top: 1rem;">Date: _______________</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--gray-dark);">
+                <p style="color: var(--gray-light); font-size: 0.875rem;">WeConquer Media — Performance Marketing That Delivers Results</p>
+                <p style="color: var(--gray-medium); font-size: 0.75rem; margin-top: 0.5rem;">Over $1 Billion Generated For Our Clients</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
