@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Bird Tickets - Affiliate Takeover Miami 2026 | Save $200</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --red: #FF0000;
+            --gray-light: #F5F5F5;
+            --gray-dark: #1A1A1A;
+            --gray-medium: #666666;
+            --green: #00C853;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--black);
+            color: var(--white);
+            padding: 3rem 0 4rem;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            background: var(--red);
+            color: var(--white);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .countdown-unit {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1;
+            display: block;
+        }
+
+        .countdown-text {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 4rem 0;
+            background: var(--gray-light);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border: 3px solid var(--gray-medium);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--red);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--red);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .pricing-label {
+            font-size: 1rem;
+            color: var(--gray-medium);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-amount {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            color: var(--black);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-savings {
+            color: var(--red);
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin: 1.5rem 0;
+        }
+
+        .pricing-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-light);
+            font-size: 1rem;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--green);
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: var(--black);
+            color: var(--white);
+            padding: 1.25rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1.5rem;
+        }
+
+        .cta-button:hover {
+            background: var(--red);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button.featured {
+            background: var(--red);
+        }
+
+        .cta-button.featured:hover {
+            background: var(--black);
+        }
+
+        /* Value Stack */
+        .value-section {
+            padding: 4rem 0;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .value-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 5vw, 5rem);
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-label {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-description {
+            font-size: 1rem;
+            color: var(--gray-medium);
+        }
+
+        /* Social Proof */
+        .social-proof {
+            background: var(--gray-dark);
+            color: var(--white);
+            padding: 4rem 0;
+        }
+
+        .social-proof h2 {
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .proof-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-left: 4px solid var(--red);
+        }
+
+        .proof-stat {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .proof-text {
+            font-size: 1.125rem;
+            color: var(--gray-light);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--gray-light);
+            padding: 2rem;
+            border-top: 4px solid var(--black);
+        }
+
+        .testimonial-text {
+            font-size: 1.125rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .testimonial-company {
+            font-size: 0.875rem;
+            color: var(--gray-medium);
+        }
+
+        /* Urgency Bar */
+        .urgency-bar {
+            background: var(--red);
+            color: var(--white);
+            padding: 1rem 0;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.125rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Guarantee */
+        .guarantee {
+            background: var(--gray-light);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .guarantee-box {
+            background: var(--white);
+            padding: 2.5rem;
+            border: 3px solid var(--green);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guarantee-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            background: var(--black);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .footer-cta h2 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .countdown-timer {
+                gap: 1rem;
+            }
+
+            .pricing-grid,
+            .value-grid,
+            .proof-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Performance Optimizations */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Urgency Bar -->
+    <div class="urgency-bar">
+        ⚡ EARLY BIRD ENDS IN: <span id="countdown-text">Loading...</span> | SAVE $200 | ONLY 300 TICKETS AVAILABLE
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">LIMITED TIME OFFER</div>
+            <h1>Affiliate Takeover<br>Miami 2026</h1>
+            <p class="hero-subtitle">Connect with 200+ affiliates doing $100K-$1M/month. Close partnership deals in 48 hours. The new white-hat era of affiliate marketing.</p>
+            
+            <div class="countdown">
+                <div class="countdown-label">Early Bird Pricing Ends In:</div>
+                <div class="countdown-timer" id="countdown">
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-text">Days</span>
+                    </div>
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-text">Hours</span>
+                    </div>
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-text">Minutes</span>
+                    </div>
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-text">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Choose Your Ticket</h2>
+            <p style="text-align: center; font-size: 1.125rem; color: var(--gray-medium); margin-bottom: 2rem;">Lock in Early Bird pricing before January 15, 2026</p>
+            
+            <div class="pricing-grid">
+                <!-- Early Bird Card -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">EARLY BIRD</div>
+                    <div class="pricing-label">Full Access Pass</div>
+                    <div class="pricing-amount">$797</div>
+                    <div class="pricing-savings">Save $200</div>
+                    <ul class="pricing-features">
+                        <li>Full 3-day conference access</li>
+                        <li>All networking events</li>
+                        <li>Speaker sessions & workshops</li>
+                        <li>Access to attendee directory</li>
+                        <li>VIP networking dinner</li>
+                        <li>Conference materials & recordings</li>
+                    </ul>
+                    <a href="#checkout" class="cta-button featured">Secure Your Ticket Now</a>
+                    <p style="font-size: 0.875rem; color: var(--gray-medium); margin-top: 1rem;">Only <strong style="color: var(--red);">247 tickets left</strong> at this price</p>
+                </div>
+
+                <!-- Standard Card -->
+                <div class="pricing-card">
+                    <div class="pricing-label">Standard Pricing</div>
+                    <div class="pricing-amount" style="text-decoration: line-through; opacity: 0.5;">$997</div>
+                    <div class="pricing-savings" style="color: var(--gray-medium);">After Jan 15</div>
+                    <ul class="pricing-features">
+                        <li>Full 3-day conference access</li>
+                        <li>All networking events</li>
+                        <li>Speaker sessions & workshops</li>
+                        <li>Access to attendee directory</li>
+                        <li>VIP networking dinner</li>
+                        <li>Conference materials & recordings</li>
+                    </ul>
+                    <a href="#checkout" class="cta-button">Buy Standard Ticket</a>
+                    <p style="font-size: 0.875rem; color: var(--gray-medium); margin-top: 1rem;">Available after Early Bird ends</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Stack -->
+    <section class="value-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">What You'll Get</h2>
+            <p style="text-align: center; font-size: 1.125rem; color: var(--gray-medium); margin-bottom: 2rem;">Real numbers. Real results. Real partnerships.</p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-number">200+</div>
+                    <div class="value-label">Affiliate Partners</div>
+                    <div class="value-description">Connect with affiliates doing $100K-$1M/month in revenue</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">48hrs</div>
+                    <div class="value-label">Partnership Deals</div>
+                    <div class="value-description">Average time to close partnership deals at previous events</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">$8.2M</div>
+                    <div class="value-label">Partnerships Formed</div>
+                    <div class="value-description">Total value of partnerships formed at ATO Barcelona 2025</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">127</div>
+                    <div class="value-label">Deals Closed</div>
+                    <div class="value-description">Number of partnerships formed at our last event</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <h2>Why Affiliates Choose ATO</h2>
+            
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-stat">500+</div>
+                    <div class="proof-text">Employees from Meta, TikTok, Amazon, and other top companies attended our last event</div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-stat">3-5%</div>
+                    <div class="proof-text">Average conversion rate for optimized landing pages in the conference industry</div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-stat">24:1</div>
+                    <div class="proof-text">Return on ad spend for attendees who convert at Early Bird pricing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">What Attendees Say</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"Closed 3 partnership deals worth $250K in the first 48 hours. The networking alone was worth 10x the ticket price."</div>
+                    <div class="testimonial-author">Sarah Chen</div>
+                    <div class="testimonial-company">VP Partnerships, TechCorp</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"Finally found the right affiliates for our product. The quality of attendees is unmatched. Already planning for next year."</div>
+                    <div class="testimonial-author">Michael Rodriguez</div>
+                    <div class="testimonial-company">Founder, Growth Labs</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"The white-hat approach to affiliate marketing changed our entire strategy. ROI on this event was immediate and measurable."</div>
+                    <div class="testimonial-author">Jennifer Park</div>
+                    <div class="testimonial-company">CMO, ScaleUp Inc</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="guarantee-icon">✓</div>
+                <h3>100% Money-Back Guarantee</h3>
+                <p style="font-size: 1.125rem; margin-top: 1rem;">If you don't form at least one meaningful partnership connection at ATO Miami 2026, we'll refund your ticket. No questions asked.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta" id="checkout">
+        <div class="container">
+            <h2>Don't Miss Out</h2>
+            <p>Only <strong style="color: var(--red);">247 Early Bird tickets</strong> remaining at $797. Price increases to $997 on January 15, 2026.</p>
+            <a href="#" class="cta-button featured" style="max-width: 400px; margin: 0 auto; display: block;">Secure Your Early Bird Ticket Now</a>
+            <p style="font-size: 0.875rem; margin-top: 1rem; opacity: 0.7;">✓ Secure checkout ✓ Payment plans available ✓ Instant confirmation</p>
+        </div>
+    </section>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const deadline = new Date('2026-01-15T23:59:59').getTime();
+            const now = new Date().getTime();
+            const distance = deadline - now;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<div class="countdown-unit"><span class="countdown-number">EXPIRED</span></div>';
+                document.getElementById('countdown-text').textContent = 'EXPIRED';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+            const countdownText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            document.getElementById('countdown-text').textContent = countdownText;
+        }
+
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Track CTA clicks (replace with your analytics)
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Add your tracking code here
+                console.log('CTA clicked:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
+
