@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Early Bird Tickets - Affiliate Takeover Miami 2026 | Save $200</title>
+    <title>Early Bird Ends Jan 15 - Save $500 | Affiliate Takeover Miami 2026</title>
+    <meta name="description" content="Join 500+ top affiliates doing $100K-$1M/month. Early Bird tickets $797 (Regular $1,297). Only until January 15th.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,13 +16,11 @@
         }
 
         :root {
+            --orange: #FF6B35;
             --black: #000000;
             --white: #FFFFFF;
-            --red: #FF0000;
             --gray-light: #F5F5F5;
             --gray-dark: #1A1A1A;
-            --gray-medium: #666666;
-            --green: #00C853;
         }
 
         body {
@@ -31,110 +30,155 @@
             line-height: 1.6;
         }
 
-        h1, h2, h3, h4 {
-            font-family: 'Bebas Neue', sans-serif;
-            line-height: 1.1;
-            letter-spacing: 0.02em;
+        /* Sticky Price Bar */
+        .sticky-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--orange);
+            color: var(--white);
+            padding: 0.75rem 0;
+            z-index: 1000;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            margin-bottom: 1rem;
+        .sticky-bar .countdown {
+            display: inline-block;
+            margin-left: 1rem;
+            font-size: 1.125rem;
         }
 
-        h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1rem;
-        }
-
-        h3 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            margin-bottom: 0.75rem;
-        }
-
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
 
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
         /* Hero Section */
         .hero {
-            background: var(--black);
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
             color: var(--white);
-            padding: 3rem 0 4rem;
+            padding: 7rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
             text-align: center;
         }
 
-        .hero-badge {
+        .urgency-badge {
             display: inline-block;
-            background: var(--red);
+            background: var(--orange);
             color: var(--white);
             padding: 0.5rem 1.5rem;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 0.875rem;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
             margin-bottom: 1.5rem;
+            border-radius: 4px;
         }
 
         .hero h1 {
-            color: var(--white);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            line-height: 1.1;
             margin-bottom: 1rem;
         }
 
-        .hero-subtitle {
+        .hero h1 .highlight {
+            color: var(--orange);
+        }
+
+        .hero .subtitle {
             font-size: clamp(1.125rem, 2vw, 1.5rem);
-            opacity: 0.9;
+            color: rgba(255,255,255,0.9);
             margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            line-height: 1.5;
         }
 
-        /* Countdown Timer */
-        .countdown {
-            background: var(--red);
-            color: var(--white);
-            padding: 2rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-
-        .countdown-label {
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
-        }
-
-        .countdown-timer {
+        .countdown-large {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
 
-        .countdown-unit {
+        .countdown-block {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            min-width: 100px;
             text-align: center;
         }
 
         .countdown-number {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--orange);
             line-height: 1;
-            display: block;
         }
 
-        .countdown-text {
+        .countdown-label {
             font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.1em;
             margin-top: 0.5rem;
         }
 
-        /* Pricing Section */
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--white);
+            padding: 1.25rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(255,107,53,0.4);
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(255,107,53,0.5);
+        }
+
+        .cta-button.secondary {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        /* Pricing Table */
         .pricing-section {
             padding: 4rem 0;
             background: var(--gray-light);
@@ -142,525 +186,811 @@
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
         .pricing-card {
             background: var(--white);
-            border: 3px solid var(--gray-medium);
-            padding: 2.5rem 2rem;
-            text-align: center;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--gray-light);
             position: relative;
+            text-align: center;
         }
 
         .pricing-card.featured {
-            border-color: var(--red);
+            border-color: var(--orange);
+            box-shadow: 0 10px 40px rgba(255,107,53,0.2);
             transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
         }
 
-        .pricing-badge {
+        .featured-badge {
             position: absolute;
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--red);
+            background: var(--orange);
             color: var(--white);
             padding: 0.5rem 1.5rem;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 0.75rem;
             letter-spacing: 0.1em;
-            text-transform: uppercase;
+            border-radius: 20px;
         }
 
-        .pricing-label {
-            font-size: 1rem;
-            color: var(--gray-medium);
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.25rem;
             margin-bottom: 0.5rem;
         }
 
-        .pricing-amount {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(3rem, 5vw, 4.5rem);
-            color: var(--black);
+        .current-price {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--orange);
             line-height: 1;
             margin-bottom: 0.5rem;
         }
 
-        .pricing-savings {
-            color: var(--red);
-            font-weight: 700;
-            font-size: 1.125rem;
+        .price-note {
+            font-size: 0.875rem;
+            color: #666;
             margin-bottom: 1.5rem;
         }
 
-        .pricing-features {
+        .savings-badge {
+            display: inline-block;
+            background: #00C851;
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            font-weight: 700;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* What's Included */
+        .included-list {
             list-style: none;
             text-align: left;
-            margin: 1.5rem 0;
+            margin: 2rem 0;
         }
 
-        .pricing-features li {
+        .included-list li {
             padding: 0.75rem 0;
-            border-bottom: 1px solid var(--gray-light);
-            font-size: 1rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
         }
 
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-features li::before {
+        .included-list li::before {
             content: '✓';
-            color: var(--green);
+            color: var(--orange);
             font-weight: bold;
             margin-right: 0.75rem;
-        }
-
-        .cta-button {
-            display: block;
-            width: 100%;
-            background: var(--black);
-            color: var(--white);
-            padding: 1.25rem 2rem;
-            font-size: 1.125rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            text-decoration: none;
-            text-align: center;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 1.5rem;
-        }
-
-        .cta-button:hover {
-            background: var(--red);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-button.featured {
-            background: var(--red);
-        }
-
-        .cta-button.featured:hover {
-            background: var(--black);
-        }
-
-        /* Value Stack */
-        .value-section {
-            padding: 4rem 0;
-        }
-
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .value-card {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .value-number {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(3rem, 5vw, 5rem);
-            color: var(--red);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .value-label {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .value-description {
-            font-size: 1rem;
-            color: var(--gray-medium);
+            font-size: 1.25rem;
         }
 
         /* Social Proof */
         .social-proof {
-            background: var(--gray-dark);
-            color: var(--white);
             padding: 4rem 0;
-        }
-
-        .social-proof h2 {
-            color: var(--white);
-            text-align: center;
-            margin-bottom: 3rem;
+            background: var(--white);
         }
 
         .proof-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            margin-top: 3rem;
         }
 
         .proof-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-left: 4px solid var(--red);
-        }
-
-        .proof-stat {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.5rem;
-            color: var(--red);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .proof-text {
-            font-size: 1.125rem;
-            color: var(--gray-light);
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 4rem 0;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .testimonial-card {
             background: var(--gray-light);
             padding: 2rem;
-            border-top: 4px solid var(--black);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .proof-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--orange);
+            line-height: 1;
+        }
+
+        .proof-label {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        /* Testimonial */
+        .testimonial-section {
+            padding: 4rem 0;
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .testimonial {
+            background: rgba(255,255,255,0.05);
+            padding: 3rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--orange);
+            max-width: 900px;
+            margin: 2rem auto;
         }
 
         .testimonial-text {
-            font-size: 1.125rem;
+            font-size: 1.5rem;
             font-style: italic;
-            margin-bottom: 1rem;
-            line-height: 1.7;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
         }
 
         .testimonial-author {
             font-weight: 700;
-            color: var(--black);
+            color: var(--orange);
         }
 
-        .testimonial-company {
-            font-size: 0.875rem;
-            color: var(--gray-medium);
+        /* Value Section */
+        .value-section {
+            padding: 4rem 0;
+            background: var(--white);
         }
 
-        /* Urgency Bar */
-        .urgency-bar {
-            background: var(--red);
-            color: var(--white);
-            padding: 1rem 0;
-            text-align: center;
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            padding: 2rem;
+            border-left: 4px solid var(--orange);
+            background: var(--gray-light);
+        }
+
+        .value-card h4 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
+            background: var(--gray-light);
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        .faq-question {
             font-weight: 700;
             font-size: 1.125rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            margin-bottom: 0.75rem;
         }
 
-        /* Guarantee */
-        .guarantee {
-            background: var(--gray-light);
+        /* Trust Badges */
+        .trust-section {
             padding: 3rem 0;
-            text-align: center;
-        }
-
-        .guarantee-box {
             background: var(--white);
-            padding: 2.5rem;
-            border: 3px solid var(--green);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .guarantee-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Footer CTA */
-        .footer-cta {
-            background: var(--black);
-            color: var(--white);
-            padding: 4rem 0;
             text-align: center;
         }
 
-        .footer-cta h2 {
-            color: var(--white);
+        .trust-icons {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .trust-icon {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: #666;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
             margin-bottom: 1rem;
         }
 
-        .footer-cta p {
+        .section-header p {
             font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            color: #666;
+        }
+
+        /* Scarcity Bar */
+        .scarcity-bar {
+            background: #FFF3CD;
+            border: 2px solid #FFB800;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+            font-weight: 700;
+            color: #856404;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .pricing-card.featured {
-                transform: none;
+            .hero {
+                padding: 6rem 0 3rem;
             }
 
-            .countdown-timer {
+            .countdown-large {
                 gap: 1rem;
             }
 
-            .pricing-grid,
-            .value-grid,
-            .proof-grid,
-            .testimonial-grid {
+            .countdown-block {
+                padding: 1rem 1.5rem;
+                min-width: 80px;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .pricing-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .current-price {
+                font-size: 3rem;
             }
         }
 
-        /* Performance Optimizations */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
+        /* Image Placeholders */
+        .image-placeholder {
+            background: var(--gray-light);
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-weight: 600;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 8px;
         }
 
-        .lazy-load {
-            opacity: 0;
-            transition: opacity 0.3s;
+        .speaker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .lazy-load.loaded {
-            opacity: 1;
+        .speaker-card {
+            text-align: center;
+        }
+
+        .speaker-image {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .speaker-name {
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+
+        .speaker-title {
+            font-size: 0.875rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
 
-    <!-- Urgency Bar -->
-    <div class="urgency-bar">
-        ⚡ EARLY BIRD ENDS IN: <span id="countdown-text">Loading...</span> | SAVE $200 | ONLY 300 TICKETS AVAILABLE
+    <!-- Sticky Price Bar -->
+    <div class="sticky-bar">
+        ⏰ EARLY BIRD ENDS IN <span class="countdown" id="sticky-countdown">13 DAYS 14:23:45</span> | SAVE $500 TODAY
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">LIMITED TIME OFFER</div>
-            <h1>Affiliate Takeover<br>Miami 2026</h1>
-            <p class="hero-subtitle">Connect with 200+ affiliates doing $100K-$1M/month. Close partnership deals in 48 hours. The new white-hat era of affiliate marketing.</p>
-            
-            <div class="countdown">
-                <div class="countdown-label">Early Bird Pricing Ends In:</div>
-                <div class="countdown-timer" id="countdown">
-                    <div class="countdown-unit">
-                        <span class="countdown-number" id="days">00</span>
-                        <span class="countdown-text">Days</span>
+            <div class="hero-content">
+                <div class="urgency-badge">🔥 EARLY BIRD PRICING ENDS JANUARY 15TH</div>
+                
+                <h1>
+                    Join 500+ Affiliates Doing<br>
+                    <span class="highlight">$100K-$1M Per Month</span>
+                </h1>
+                
+                <p class="subtitle">
+                    Miami Beach • March 18-19, 2026 • The Only White-Hat Affiliate Conference<br>
+                    Where Real Partnerships Get Made
+                </p>
+
+                <!-- Countdown Timer -->
+                <div class="countdown-large">
+                    <div class="countdown-block">
+                        <div class="countdown-number" id="days">13</div>
+                        <div class="countdown-label">Days</div>
                     </div>
-                    <div class="countdown-unit">
-                        <span class="countdown-number" id="hours">00</span>
-                        <span class="countdown-text">Hours</span>
+                    <div class="countdown-block">
+                        <div class="countdown-number" id="hours">14</div>
+                        <div class="countdown-label">Hours</div>
                     </div>
-                    <div class="countdown-unit">
-                        <span class="countdown-number" id="minutes">00</span>
-                        <span class="countdown-text">Minutes</span>
+                    <div class="countdown-block">
+                        <div class="countdown-number" id="minutes">23</div>
+                        <div class="countdown-label">Minutes</div>
                     </div>
-                    <div class="countdown-unit">
-                        <span class="countdown-number" id="seconds">00</span>
-                        <span class="countdown-text">Seconds</span>
+                    <div class="countdown-block">
+                        <div class="countdown-number" id="seconds">45</div>
+                        <div class="countdown-label">Seconds</div>
                     </div>
+                </div>
+
+                <a href="#pricing" class="cta-button">Lock In Early Bird Price - $797</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Numbers -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-number">500+</div>
+                    <div class="proof-label">Top Affiliates Attending</div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-number">$95M+</div>
+                    <div class="proof-label">Generated by Our Speakers</div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-number">$12M+</div>
+                    <div class="proof-label">In Deals Closed at Barcelona</div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-number">2 Days</div>
+                    <div class="proof-label">Of High-Level Networking</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing-section">
+    <section class="pricing-section" id="pricing">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 1rem;">Choose Your Ticket</h2>
-            <p style="text-align: center; font-size: 1.125rem; color: var(--gray-medium); margin-bottom: 2rem;">Lock in Early Bird pricing before January 15, 2026</p>
-            
+            <div class="section-header">
+                <h2>Lock In Your Ticket Before Prices Jump</h2>
+                <p>Early Bird pricing ends January 15th. Don't pay $500 more.</p>
+            </div>
+
+            <div class="scarcity-bar">
+                ⚠️ Only 67 Early Bird Tickets Remaining at This Price
+            </div>
+
             <div class="pricing-grid">
-                <!-- Early Bird Card -->
+                <!-- Early Bird Ticket -->
                 <div class="pricing-card featured">
-                    <div class="pricing-badge">EARLY BIRD</div>
-                    <div class="pricing-label">Full Access Pass</div>
-                    <div class="pricing-amount">$797</div>
-                    <div class="pricing-savings">Save $200</div>
-                    <ul class="pricing-features">
-                        <li>Full 3-day conference access</li>
-                        <li>All networking events</li>
-                        <li>Speaker sessions & workshops</li>
-                        <li>Access to attendee directory</li>
-                        <li>VIP networking dinner</li>
-                        <li>Conference materials & recordings</li>
+                    <div class="featured-badge">SAVE $500 - ENDS JAN 15</div>
+                    <h3>Early Bird</h3>
+                    <div class="original-price">Regular Price: $1,297</div>
+                    <div class="current-price">$797</div>
+                    <div class="price-note">For Independent Affiliates & Media Buyers</div>
+                    <div class="savings-badge">✓ You Save $500</div>
+                    
+                    <ul class="included-list">
+                        <li>2-Day All-Access Pass</li>
+                        <li>35+ Expert Speaker Sessions</li>
+                        <li>Meet 500+ Active Affiliates & Networks</li>
+                        <li>Access to Exclusive High-Payout Offers</li>
+                        <li>Networking Lounges & Speed Dating</li>
+                        <li>Official After-Parties Included</li>
+                        <li>Exhibition Floor Access</li>
+                        <li>Your Badge + Logo in ATO App</li>
                     </ul>
-                    <a href="#checkout" class="cta-button featured">Secure Your Ticket Now</a>
-                    <p style="font-size: 0.875rem; color: var(--gray-medium); margin-top: 1rem;">Only <strong style="color: var(--red);">247 tickets left</strong> at this price</p>
+
+                    <a href="#checkout" class="cta-button">Get Early Bird Ticket - $797</a>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: #666;">✓ Transferable up to 30 days before event</p>
                 </div>
 
-                <!-- Standard Card -->
+                <!-- Standard Price Preview -->
                 <div class="pricing-card">
-                    <div class="pricing-label">Standard Pricing</div>
-                    <div class="pricing-amount" style="text-decoration: line-through; opacity: 0.5;">$997</div>
-                    <div class="pricing-savings" style="color: var(--gray-medium);">After Jan 15</div>
-                    <ul class="pricing-features">
-                        <li>Full 3-day conference access</li>
-                        <li>All networking events</li>
-                        <li>Speaker sessions & workshops</li>
-                        <li>Access to attendee directory</li>
-                        <li>VIP networking dinner</li>
-                        <li>Conference materials & recordings</li>
+                    <h3>Standard Price</h3>
+                    <div style="color: #999; margin-bottom: 1rem;">Starts January 16</div>
+                    <div class="current-price" style="color: #999;">$997</div>
+                    <div class="price-note">Same Access, Higher Price</div>
+                    
+                    <ul class="included-list" style="opacity: 0.6;">
+                        <li>2-Day All-Access Pass</li>
+                        <li>35+ Expert Speaker Sessions</li>
+                        <li>Meet 500+ Active Affiliates & Networks</li>
+                        <li>Access to Exclusive High-Payout Offers</li>
+                        <li>Networking Lounges & Speed Dating</li>
+                        <li>Official After-Parties Included</li>
+                        <li>Exhibition Floor Access</li>
+                        <li>Your Badge + Logo in ATO App</li>
                     </ul>
-                    <a href="#checkout" class="cta-button">Buy Standard Ticket</a>
-                    <p style="font-size: 0.875rem; color: var(--gray-medium); margin-top: 1rem;">Available after Early Bird ends</p>
+
+                    <button class="cta-button secondary" disabled style="opacity: 0.5; cursor: not-allowed;">Available Jan 16</button>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: #E74C3C; font-weight: 700;">⚠️ Don't pay $200 more</p>
                 </div>
+
+                <!-- Regular Price Preview -->
+                <div class="pricing-card">
+                    <h3>Regular Price</h3>
+                    <div style="color: #999; margin-bottom: 1rem;">Starts February 16</div>
+                    <div class="current-price" style="color: #999;">$1,297</div>
+                    <div class="price-note">Same Access, Full Price</div>
+                    
+                    <ul class="included-list" style="opacity: 0.6;">
+                        <li>2-Day All-Access Pass</li>
+                        <li>35+ Expert Speaker Sessions</li>
+                        <li>Meet 500+ Active Affiliates & Networks</li>
+                        <li>Access to Exclusive High-Payout Offers</li>
+                        <li>Networking Lounges & Speed Dating</li>
+                        <li>Official After-Parties Included</li>
+                        <li>Exhibition Floor Access</li>
+                        <li>Your Badge + Logo in ATO App</li>
+                    </ul>
+
+                    <button class="cta-button secondary" disabled style="opacity: 0.5; cursor: not-allowed;">Available Feb 16</button>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: #E74C3C; font-weight: 700;">⚠️ Don't pay $500 more</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#checkout" class="cta-button">Secure My Early Bird Ticket Now</a>
             </div>
         </div>
     </section>
 
-    <!-- Value Stack -->
+    <!-- What You'll Actually Get -->
     <section class="value-section">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 1rem;">What You'll Get</h2>
-            <p style="text-align: center; font-size: 1.125rem; color: var(--gray-medium); margin-bottom: 2rem;">Real numbers. Real results. Real partnerships.</p>
-            
+            <div class="section-header">
+                <h2>What You Actually Get (No Fluff)</h2>
+                <p>This isn't theory. It's what's working right now.</p>
+            </div>
+
             <div class="value-grid">
                 <div class="value-card">
-                    <div class="value-number">200+</div>
-                    <div class="value-label">Affiliate Partners</div>
-                    <div class="value-description">Connect with affiliates doing $100K-$1M/month in revenue</div>
+                    <h4>🤝 Meet Your Next 6-Figure Partner</h4>
+                    <p>500+ verified affiliates, networks, and brands in one room. Last year attendees closed $12M+ in partnership deals.</p>
                 </div>
+
                 <div class="value-card">
-                    <div class="value-number">48hrs</div>
-                    <div class="value-label">Partnership Deals</div>
-                    <div class="value-description">Average time to close partnership deals at previous events</div>
+                    <h4>💰 Access High-Payout Offers</h4>
+                    <p>50+ white-hat offers with proven 2%+ conversion rates. Direct access to affiliate managers and network owners.</p>
                 </div>
+
                 <div class="value-card">
-                    <div class="value-number">$8.2M</div>
-                    <div class="value-label">Partnerships Formed</div>
-                    <div class="value-description">Total value of partnerships formed at ATO Barcelona 2025</div>
+                    <h4>📈 Learn What's Scaling Now</h4>
+                    <p>35+ speakers who've generated $95M+ combined. No theory - just strategies working in 2026.</p>
                 </div>
+
                 <div class="value-card">
-                    <div class="value-number">127</div>
-                    <div class="value-label">Deals Closed</div>
-                    <div class="value-description">Number of partnerships formed at our last event</div>
+                    <h4>🎯 Traffic Partner Connections</h4>
+                    <p>Meet media buyers spending $1M+ monthly on Meta, TikTok, Google, and Native. Find your scaling channel.</p>
+                </div>
+
+                <div class="value-card">
+                    <h4>🍾 Private After-Parties</h4>
+                    <p>Where the real deals happen. Exclusive mixers, rooftop parties, and intimate dinners with 8-figure affiliates.</p>
+                </div>
+
+                <div class="value-card">
+                    <h4>✅ Zero Black-Hat BS</h4>
+                    <p>Everyone here is vetted. No crypto cowboys. No sketchy lead gen. Just legit marketers building sustainable businesses.</p>
+                </div>
+            </div>
+
+            <!-- IMAGE PLACEHOLDER: Add hero video or event photos here -->
+            <div class="image-placeholder" style="margin-top: 3rem; height: 400px;">
+                📹 INSERT: Past event highlight video or photo collage<br>
+                (Show networking, stage, venue, happy attendees)
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="container-narrow">
+            <div class="section-header">
+                <h2 style="color: var(--white);">What Attendees Actually Said</h2>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    "I met my biggest traffic partner at ATO Barcelona. We're now doing $200K/month together. This wasn't networking - it was deal-making."
+                </div>
+                <div class="testimonial-author">— Sarah Chen, Media Buyer</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    "Affiliate Takeover was hands down the best industry event I've ever been to. Everyone here is the real deal."
+                </div>
+                <div class="testimonial-author">— Eric Schechter, GiddyUp</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    "We had more meaningful conversations with companies who genuinely align with our ethos than we've had at the biggest shows in recent years."
+                </div>
+                <div class="testimonial-author">— Josh Littler, Digital Mojito</div>
+            </div>
+
+            <!-- IMAGE PLACEHOLDER: Add testimonial photos/videos here -->
+            <div class="image-placeholder" style="margin-top: 2rem; height: 300px;">
+                📹 INSERT: Video testimonials or photo grid of attendees<br>
+                (Show 3-4 short video clips from past attendees)
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Preview -->
+    <section class="social-proof" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Learn From The Best</h2>
+                <p>35+ speakers who've generated $95M+ in affiliate commissions</p>
+            </div>
+
+            <!-- IMAGE PLACEHOLDER: Add speaker headshots here -->
+            <div class="speaker-grid">
+                <div class="speaker-card">
+                    <div class="image-placeholder speaker-image">
+                        🖼️ INSERT:<br>Alex Micol Photo
+                    </div>
+                    <div class="speaker-name">Alex Micol</div>
+                    <div class="speaker-title">$95M+ Generated • Founder ATO</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="image-placeholder speaker-image">
+                        🖼️ INSERT:<br>Ezra Firestone Photo
+                    </div>
+                    <div class="speaker-name">Ezra Firestone</div>
+                    <div class="speaker-title">$200M+ in Sales • Smart Marketer</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="image-placeholder speaker-image">
+                        🖼️ INSERT:<br>Topher Grant Photo
+                    </div>
+                    <div class="speaker-name">Topher Grant</div>
+                    <div class="speaker-title">Billions Generated • GiddyUp</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="image-placeholder speaker-image">
+                        🖼️ INSERT:<br>Marisha Lakhiani Photo
+                    </div>
+                    <div class="speaker-name">Marisha Lakhiani</div>
+                    <div class="speaker-title">$30M→$170M • Mindvalley</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#pricing" class="cta-button secondary">See Full Speaker Lineup</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Miami -->
+    <section class="value-section" style="background: var(--black); color: var(--white);">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: var(--white);">Why Miami Beach?</h2>
+                <p style="color: rgba(255,255,255,0.8);">Because if you're making moves, do it somewhere iconic.</p>
+            </div>
+
+            <!-- IMAGE PLACEHOLDER: Add Miami photos here -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 2rem;">
+                <div class="image-placeholder" style="height: 250px; background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.6);">
+                    🖼️ INSERT:<br>Miami Beach aerial<br>or poolside venue photo
+                </div>
+                <div class="image-placeholder" style="height: 250px; background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.6);">
+                    🖼️ INSERT:<br>Rooftop party<br>or networking scene
+                </div>
+                <div class="image-placeholder" style="height: 250px; background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.6);">
+                    🖼️ INSERT:<br>Convention center<br>or event venue
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.25rem; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto;">
+                    Neon lights. Rooftop parties. Palm trees. Poolside deals. That electric, anything-can-happen energy. 
+                    This is where beachside bliss meets business hustle.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container-narrow">
+            <div class="section-header">
+                <h2>Quick Answers</h2>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I transfer my ticket if I can't make it?</div>
+                <div>Yes! Tickets are fully transferable up to 30 days before the event. Just email us the new name.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if I can't get a visa in time?</div>
+                <div>We'll automatically transfer your ticket to Barcelona Summer 2026. Zero risk.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is this for beginners or advanced affiliates?</div>
+                <div>Advanced. If you're not already running affiliate campaigns or managing offers, this event won't be valuable. This is for people doing $10K+ monthly who want to scale to $100K-$1M+.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What's included in the ticket price?</div>
+                <div>Everything. All sessions, exhibition floor, networking events, official after-parties. No hidden costs except your own food/drinks.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I know this isn't just another conference?</div>
+                <div>Fair question. Last year in Barcelona, attendees closed $12M+ in actual partnership deals. We cap attendance, vet every attendee, and ban anyone running black-hat. This isn't networking - it's deal-making.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-section">
+        <div class="container">
+            <h3>Zero-Risk Guarantee</h3>
+            <div class="trust-icons">
+                <div class="trust-icon">
+                    <span style="font-size: 1.5rem;">🔒</span> Secure SSL Checkout
+                </div>
+                <div class="trust-icon">
+                    <span style="font-size: 1.5rem;">↔️</span> Fully Transferable
+                </div>
+                <div class="trust-icon">
+                    <span style="font-size: 1.5rem;">✈️</span> Visa Issues? Transfer to Barcelona
+                </div>
+                <div class="trust-icon">
+                    <span style="font-size: 1.5rem;">✓</span> Used by 500+ Top Affiliates
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof -->
-    <section class="social-proof">
-        <div class="container">
-            <h2>Why Affiliates Choose ATO</h2>
-            
-            <div class="proof-grid">
-                <div class="proof-card">
-                    <div class="proof-stat">500+</div>
-                    <div class="proof-text">Employees from Meta, TikTok, Amazon, and other top companies attended our last event</div>
-                </div>
-                <div class="proof-card">
-                    <div class="proof-stat">3-5%</div>
-                    <div class="proof-text">Average conversion rate for optimized landing pages in the conference industry</div>
-                </div>
-                <div class="proof-card">
-                    <div class="proof-stat">24:1</div>
-                    <div class="proof-text">Return on ad spend for attendees who convert at Early Bird pricing</div>
-                </div>
+    <!-- Final CTA Section -->
+    <section style="background: var(--orange); color: var(--white); padding: 5rem 0; text-align: center;">
+        <div class="container-narrow">
+            <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem; color: var(--white);">
+                Don't Pay $500 More Next Month
+            </h2>
+            <p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
+                Early Bird pricing ends January 15th. Lock in $797 before it jumps to $997.
+            </p>
+
+            <div class="scarcity-bar" style="background: rgba(0,0,0,0.2); border-color: rgba(0,0,0,0.3); color: var(--white); font-size: 1.25rem;">
+                ⚠️ Only 67 Early Bird Tickets Remaining
             </div>
+
+            <div style="margin: 2rem 0;">
+                <div style="font-size: 1.125rem; margin-bottom: 0.5rem; opacity: 0.9;">Early Bird Price Ends In:</div>
+                <div style="font-size: 2.5rem; font-weight: 900; letter-spacing: 0.05em;" id="final-countdown">13 DAYS 14:23:45</div>
+            </div>
+
+            <a href="#checkout" class="cta-button" style="background: var(--black); color: var(--white); font-size: 1.5rem; padding: 1.5rem 4rem;">
+                Get My Ticket - Save $500 Now
+            </a>
+
+            <p style="margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.9;">
+                ✓ Instant confirmation • ✓ Transferable ticket • ✓ Join 500+ top affiliates
+            </p>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 1rem;">What Attendees Say</h2>
-            
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">"Closed 3 partnership deals worth $250K in the first 48 hours. The networking alone was worth 10x the ticket price."</div>
-                    <div class="testimonial-author">Sarah Chen</div>
-                    <div class="testimonial-company">VP Partnerships, TechCorp</div>
+    <!-- Checkout Form Section -->
+    <section id="checkout" style="padding: 5rem 0; background: var(--gray-light);">
+        <div class="container-narrow">
+            <div class="section-header">
+                <h2>Complete Your Registration</h2>
+                <p>Secure your Early Bird ticket before January 15th</p>
+            </div>
+
+            <div style="background: var(--white); padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                <div style="background: #D4EDDA; border: 2px solid #28A745; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 900; color: #155724; margin-bottom: 0.5rem;">Early Bird Ticket - $797</div>
+                    <div style="color: #155724; font-weight: 600;">Regular Price: <span style="text-decoration: line-through;">$1,297</span> • You Save: $500</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">"Finally found the right affiliates for our product. The quality of attendees is unmatched. Already planning for next year."</div>
-                    <div class="testimonial-author">Michael Rodriguez</div>
-                    <div class="testimonial-company">Founder, Growth Labs</div>
+
+                <!-- IMAGE PLACEHOLDER: Integration point for actual checkout form -->
+                <div class="image-placeholder" style="height: 400px; margin: 2rem 0;">
+                    💳 INSERT: ACTUAL CHECKOUT FORM HERE<br><br>
+                    Fields needed:<br>
+                    - First Name<br>
+                    - Last Name<br>
+                    - Email<br>
+                    - Company (optional)<br>
+                    - Ticket Type selector<br>
+                    - Payment processor integration<br>
+                    - Terms checkbox
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">"The white-hat approach to affiliate marketing changed our entire strategy. ROI on this event was immediate and measurable."</div>
-                    <div class="testimonial-author">Jennifer Park</div>
-                    <div class="testimonial-company">CMO, ScaleUp Inc</div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <div style="display: flex; justify-content: center; gap: 1rem; align-items: center; color: #666;">
+                        <span>🔒 Secure Payment</span>
+                        <span>•</span>
+                        <span>💳 All Major Cards</span>
+                        <span>•</span>
+                        <span>✓ Instant Confirmation</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Guarantee -->
-    <section class="guarantee">
-        <div class="container">
-            <div class="guarantee-box">
-                <div class="guarantee-icon">✓</div>
-                <h3>100% Money-Back Guarantee</h3>
-                <p style="font-size: 1.125rem; margin-top: 1rem;">If you don't form at least one meaningful partnership connection at ATO Miami 2026, we'll refund your ticket. No questions asked.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer CTA -->
-    <section class="footer-cta" id="checkout">
-        <div class="container">
-            <h2>Don't Miss Out</h2>
-            <p>Only <strong style="color: var(--red);">247 Early Bird tickets</strong> remaining at $797. Price increases to $997 on January 15, 2026.</p>
-            <a href="#" class="cta-button featured" style="max-width: 400px; margin: 0 auto; display: block;">Secure Your Early Bird Ticket Now</a>
-            <p style="font-size: 0.875rem; margin-top: 1rem; opacity: 0.7;">✓ Secure checkout ✓ Payment plans available ✓ Instant confirmation</p>
         </div>
     </section>
 
     <script>
-        // Countdown Timer
+        // Countdown Timer Logic
         function updateCountdown() {
-            const deadline = new Date('2026-01-15T23:59:59').getTime();
+            // Set target date to January 15, 2026 at midnight
+            const targetDate = new Date('2026-01-15T23:59:59').getTime();
             const now = new Date().getTime();
-            const distance = deadline - now;
-
-            if (distance < 0) {
-                document.getElementById('countdown').innerHTML = '<div class="countdown-unit"><span class="countdown-number">EXPIRED</span></div>';
-                document.getElementById('countdown-text').textContent = 'EXPIRED';
-                return;
-            }
+            const distance = targetDate - now;
 
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById('days').textContent = String(days).padStart(2, '0');
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            // Update large countdown
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
 
-            const countdownText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-            document.getElementById('countdown-text').textContent = countdownText;
+            // Update sticky bar
+            document.getElementById('sticky-countdown').textContent = 
+                `${days} DAYS ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            // Update final countdown
+            document.getElementById('final-countdown').textContent = 
+                `${days} DAYS ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }
 
         // Update countdown every second
         updateCountdown();
         setInterval(updateCountdown, 1000);
 
-        // Smooth scroll for anchor links
+        // Smooth scroll to pricing
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -674,14 +1004,20 @@
             });
         });
 
-        // Track CTA clicks (replace with your analytics)
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', function(e) {
-                // Add your tracking code here
-                console.log('CTA clicked:', this.textContent);
-            });
+        // Track scroll for sticky bar
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const stickyBar = document.querySelector('.sticky-bar');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                stickyBar.style.transform = 'translateY(-100%)';
+            } else {
+                stickyBar.style.transform = 'translateY(0)';
+            }
+            lastScroll = currentScroll;
         });
     </script>
+
 </body>
 </html>
-
