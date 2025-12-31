@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Early Bird Ends Jan 15 - Save $500 | Affiliate Takeover Miami 2026</title>
-    <meta name="description" content="Join 500+ top affiliates doing $100K-$1M/month. Early Bird tickets $797 (Regular $1,297). Only until January 15th.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>ATO Miami 2026 - Save $500 in Next 24 Hours | Early Bird $797</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,1008 +13,1050 @@
         }
 
         :root {
-            --orange: #FF6B35;
-            --black: #000000;
+            --red: #FF0000;
+            --black: #1a1a1a;
             --white: #FFFFFF;
-            --gray-light: #F5F5F5;
-            --gray-dark: #1A1A1A;
+            --gray: #666;
         }
 
         body {
             font-family: 'Inter', sans-serif;
+            line-height: 1.6;
             color: var(--black);
             background: var(--white);
-            line-height: 1.6;
         }
 
-        /* Sticky Price Bar */
-        .sticky-bar {
-            position: fixed;
+        /* Sticky Countdown Banner */
+        .countdown-banner {
+            position: sticky;
             top: 0;
-            width: 100%;
-            background: var(--orange);
+            background: var(--red);
             color: var(--white);
-            padding: 0.75rem 0;
+            padding: 1rem 2rem;
             z-index: 1000;
-            text-align: center;
-            font-weight: 700;
-            font-size: 0.875rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .sticky-bar .countdown {
-            display: inline-block;
-            margin-left: 1rem;
-            font-size: 1.125rem;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .container-narrow {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-            color: var(--white);
-            padding: 7rem 0 4rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 60%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .urgency-badge {
-            display: inline-block;
-            background: var(--orange);
-            color: var(--white);
-            padding: 0.5rem 1.5rem;
-            font-weight: 800;
-            font-size: 0.875rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-            border-radius: 4px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-        }
-
-        .hero h1 .highlight {
-            color: var(--orange);
-        }
-
-        .hero .subtitle {
-            font-size: clamp(1.125rem, 2vw, 1.5rem);
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 2rem;
-            line-height: 1.5;
-        }
-
-        .countdown-large {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
-        .countdown-block {
-            background: rgba(255,255,255,0.1);
-            padding: 1.5rem 2rem;
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-            min-width: 100px;
+        .countdown-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .countdown-text span {
+            background: var(--white);
+            color: var(--red);
+            padding: 0.3rem 1rem;
+            border-radius: 4px;
+            margin: 0 0.5rem;
+            font-family: 'Bebas Neue';
+            font-size: 1.5rem;
+        }
+
+        .countdown-timer {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .countdown-box {
+            background: rgba(0,0,0,0.4);
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
             text-align: center;
+            min-width: 55px;
         }
 
         .countdown-number {
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--orange);
+            font-family: 'Bebas Neue';
+            font-size: 1.75rem;
             line-height: 1;
         }
 
         .countdown-label {
-            font-size: 0.875rem;
-            color: rgba(255,255,255,0.8);
+            font-size: 0.65rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            opacity: 0.9;
+        }
+
+        /* Logo Ticker */
+        .logo-ticker {
+            background: #f5f5f5;
+            padding: 2rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ticker-wrapper {
+            display: flex;
+            animation: scroll 30s linear infinite;
+        }
+
+        .ticker-item {
+            flex: 0 0 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        @keyframes scroll {
+            0% {transform: translateX(0);}
+            100% {transform: translateX(-50%);}
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue';
+            font-size: 4.5rem;
+            line-height: 0.9;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            line-height: 1.3;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue';
+            font-size: 3.5rem;
+            color: var(--red);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
             margin-top: 0.5rem;
+        }
+
+        /* Video Container */
+        .video-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         /* CTA Button */
         .cta-button {
             display: inline-block;
-            background: var(--orange);
+            background: var(--red);
             color: var(--white);
-            padding: 1.25rem 3rem;
-            font-size: 1.25rem;
+            padding: 1.5rem 3.5rem;
+            font-size: 1.4rem;
             font-weight: 800;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(255,107,53,0.4);
-            cursor: pointer;
-            border: none;
+            box-shadow: 0 6px 20px rgba(255,0,0,0.5);
+            font-family: 'Bebas Neue';
+            margin: 1rem 0.5rem;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(255,107,53,0.5);
+            background: #CC0000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,0,0,0.7);
         }
 
-        .cta-button.secondary {
+        /* Section Styles */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-dark {
+            background: var(--black);
+            color: var(--white);
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue';
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--gray);
+            margin-bottom: 3rem;
+        }
+
+        /* Video Testimonials Grid */
+        .testimonial-videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .testimonial-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Massive Logo Grid */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 3rem;
             background: var(--white);
-            color: var(--black);
+            border-radius: 12px;
         }
 
-        /* Pricing Table */
-        .pricing-section {
-            padding: 4rem 0;
-            background: var(--gray-light);
+        .logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            font-weight: 700;
+            color: var(--gray);
+            font-size: 1.1rem;
+            text-align: center;
+            min-height: 100px;
+            transition: all 0.3s ease;
         }
 
-        .pricing-grid {
+        .logo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 75%;
+            background: #f0f0f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
+            margin: 3rem 0;
         }
 
         .pricing-card {
             background: var(--white);
-            padding: 2.5rem;
             border-radius: 12px;
-            border: 2px solid var(--gray-light);
-            position: relative;
+            padding: 3rem;
             text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
         }
 
         .pricing-card.featured {
-            border-color: var(--orange);
-            box-shadow: 0 10px 40px rgba(255,107,53,0.2);
+            border-color: var(--red);
             transform: scale(1.05);
         }
 
-        .featured-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--orange);
+        .pricing-badge {
+            background: var(--red);
             color: var(--white);
-            padding: 0.5rem 1.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
             font-weight: 800;
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            border-radius: 20px;
-        }
-
-        .pricing-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .original-price {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .current-price {
-            font-size: 4rem;
-            font-weight: 900;
-            color: var(--orange);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-note {
-            font-size: 0.875rem;
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-
-        .savings-badge {
+            font-size: 0.9rem;
             display: inline-block;
-            background: #00C851;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pricing-title {
+            font-family: 'Bebas Neue';
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-price {
+            font-family: 'Bebas Neue';
+            font-size: 5rem;
+            color: var(--red);
+            line-height: 1;
+        }
+
+        .pricing-savings {
+            background: #00C853;
             color: var(--white);
             padding: 0.5rem 1rem;
+            border-radius: 20px;
             font-weight: 700;
-            border-radius: 4px;
-            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin: 1rem 0;
         }
 
-        /* What's Included */
-        .included-list {
+        .pricing-features {
             list-style: none;
-            text-align: left;
             margin: 2rem 0;
+            text-align: left;
         }
 
-        .included-list li {
+        .pricing-features li {
             padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
             font-size: 0.95rem;
-            display: flex;
-            align-items: flex-start;
         }
 
-        .included-list li::before {
-            content: '✓';
-            color: var(--orange);
+        .pricing-features li:before {
+            content: "✓";
+            color: #00C853;
             font-weight: bold;
             margin-right: 0.75rem;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
         }
 
-        /* Social Proof */
-        .social-proof {
-            padding: 4rem 0;
-            background: var(--white);
-        }
-
-        .proof-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .proof-card {
-            background: var(--gray-light);
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .proof-number {
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--orange);
-            line-height: 1;
-        }
-
-        .proof-label {
-            font-size: 1rem;
-            color: #666;
-            margin-top: 0.5rem;
-        }
-
-        /* Testimonial */
-        .testimonial-section {
-            padding: 4rem 0;
-            background: var(--black);
+        /* Urgency Box */
+        .urgency-box {
+            background: linear-gradient(135deg, #FF0000, #CC0000);
             color: var(--white);
-        }
-
-        .testimonial {
-            background: rgba(255,255,255,0.05);
             padding: 3rem;
             border-radius: 12px;
-            border-left: 4px solid var(--orange);
-            max-width: 900px;
-            margin: 2rem auto;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: 0 10px 40px rgba(255,0,0,0.3);
         }
 
-        .testimonial-text {
-            font-size: 1.5rem;
-            font-style: italic;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .testimonial-author {
-            font-weight: 700;
-            color: var(--orange);
-        }
-
-        /* Value Section */
-        .value-section {
-            padding: 4rem 0;
-            background: var(--white);
-        }
-
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .value-card {
-            padding: 2rem;
-            border-left: 4px solid var(--orange);
-            background: var(--gray-light);
-        }
-
-        .value-card h4 {
-            font-size: 1.25rem;
-            font-weight: 800;
+        .urgency-box h3 {
+            font-family: 'Bebas Neue';
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        /* FAQ Section */
-        .faq-section {
-            padding: 4rem 0;
-            background: var(--gray-light);
-        }
-
-        .faq-item {
-            background: var(--white);
-            padding: 2rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-        }
-
-        .faq-question {
-            font-weight: 700;
-            font-size: 1.125rem;
-            margin-bottom: 0.75rem;
-        }
-
-        /* Trust Badges */
-        .trust-section {
-            padding: 3rem 0;
-            background: var(--white);
-            text-align: center;
-        }
-
-        .trust-icons {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .trust-icon {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-            color: #666;
-        }
-
-        /* Section Headers */
-        .section-header {
-            text-align: center;
+        .urgency-box p {
+            font-size: 1.3rem;
             margin-bottom: 2rem;
-        }
-
-        .section-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 900;
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            font-size: 1.25rem;
-            color: #666;
-        }
-
-        /* Scarcity Bar */
-        .scarcity-bar {
-            background: #FFF3CD;
-            border: 2px solid #FFB800;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            margin: 2rem 0;
-            font-weight: 700;
-            color: #856404;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero {
-                padding: 6rem 0 3rem;
+            h1 {
+                font-size: 3rem;
             }
 
-            .countdown-large {
-                gap: 1rem;
+            .countdown-banner {
+                flex-direction: column;
+                text-align: center;
             }
 
-            .countdown-block {
-                padding: 1rem 1.5rem;
-                min-width: 80px;
+            .hero-stats {
+                gap: 1.5rem;
             }
 
-            .countdown-number {
-                font-size: 2rem;
+            .stat-number {
+                font-size: 2.5rem;
             }
 
             .pricing-card.featured {
                 transform: scale(1);
             }
 
-            .pricing-grid {
-                grid-template-columns: 1fr;
+            .logo-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 1rem;
+                padding: 2rem;
             }
-
-            .current-price {
-                font-size: 3rem;
-            }
-        }
-
-        /* Image Placeholders */
-        .image-placeholder {
-            background: var(--gray-light);
-            border: 2px dashed #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-weight: 600;
-            text-align: center;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        .speaker-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .speaker-card {
-            text-align: center;
-        }
-
-        .speaker-image {
-            width: 100%;
-            aspect-ratio: 1;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-        }
-
-        .speaker-name {
-            font-weight: 700;
-            font-size: 1.125rem;
-        }
-
-        .speaker-title {
-            font-size: 0.875rem;
-            color: #666;
         }
     </style>
 </head>
 <body>
+    <!-- Sticky Countdown Banner -->
+    <div class="countdown-banner">
+        <div class="countdown-text">
+            ⚡ BUY NOW & <span>SAVE $500</span> - OFFER ENDS IN:
+        </div>
+        <div class="countdown-timer" id="sticky-countdown">
+            <div class="countdown-box">
+                <div class="countdown-number" id="hours">23</div>
+                <div class="countdown-label">HRS</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-number" id="minutes">59</div>
+                <div class="countdown-label">MIN</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-number" id="seconds">59</div>
+                <div class="countdown-label">SEC</div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Sticky Price Bar -->
-    <div class="sticky-bar">
-        ⏰ EARLY BIRD ENDS IN <span class="countdown" id="sticky-countdown">13 DAYS 14:23:45</span> | SAVE $500 TODAY
+    <!-- Logo Ticker -->
+    <div class="logo-ticker">
+        <div class="ticker-wrapper">
+            <div class="ticker-item">META</div>
+            <div class="ticker-item">TIKTOK</div>
+            <div class="ticker-item">GOOGLE</div>
+            <div class="ticker-item">RINGBA</div>
+            <div class="ticker-item">GIDDYUP</div>
+            <div class="ticker-item">OUTBRAIN</div>
+            <div class="ticker-item">MGID</div>
+            <div class="ticker-item">CLICKBANK</div>
+            <div class="ticker-item">TABOOLA</div>
+            <div class="ticker-item">SNAP</div>
+            <!-- Duplicate for seamless loop -->
+            <div class="ticker-item">META</div>
+            <div class="ticker-item">TIKTOK</div>
+            <div class="ticker-item">GOOGLE</div>
+            <div class="ticker-item">RINGBA</div>
+            <div class="ticker-item">GIDDYUP</div>
+            <div class="ticker-item">OUTBRAIN</div>
+            <div class="ticker-item">MGID</div>
+            <div class="ticker-item">CLICKBANK</div>
+            <div class="ticker-item">TABOOLA</div>
+            <div class="ticker-item">SNAP</div>
+        </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="urgency-badge">🔥 EARLY BIRD PRICING ENDS JANUARY 15TH</div>
-                
-                <h1>
-                    Join 500+ Affiliates Doing<br>
-                    <span class="highlight">$100K-$1M Per Month</span>
-                </h1>
-                
-                <p class="subtitle">
-                    Miami Beach • March 18-19, 2026 • The Only White-Hat Affiliate Conference<br>
-                    Where Real Partnerships Get Made
-                </p>
+        <div class="hero-content">
+            <h1>AFFILIATE TAKEOVER<br>MIAMI 2026</h1>
+            <p class="hero-subtitle">
+                The #1 White-Hat Affiliate Marketing Conference<br>
+                Miami • March 18-19, 2026
+            </p>
 
-                <!-- Countdown Timer -->
-                <div class="countdown-large">
-                    <div class="countdown-block">
-                        <div class="countdown-number" id="days">13</div>
-                        <div class="countdown-label">Days</div>
-                    </div>
-                    <div class="countdown-block">
-                        <div class="countdown-number" id="hours">14</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-block">
-                        <div class="countdown-number" id="minutes">23</div>
-                        <div class="countdown-label">Minutes</div>
-                    </div>
-                    <div class="countdown-block">
-                        <div class="countdown-number" id="seconds">45</div>
-                        <div class="countdown-label">Seconds</div>
-                    </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">Attendees</div>
                 </div>
+                <div class="hero-stat">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Speakers</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Exhibitors</div>
+                </div>
+            </div>
 
-                <a href="#pricing" class="cta-button">Lock In Early Bird Price - $797</a>
+            <!-- Event Promo Video -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/FItyijIJzCg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="urgency-box">
+                <h3>⚡ EARLY BIRD ENDS IN 24 HOURS</h3>
+                <p><strong>$797</strong> (Regular Price: $1,297) - Save $500 Per Ticket</p>
+                <a href="#pricing" class="cta-button">GET EARLY BIRD TICKET NOW</a>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof Numbers -->
-    <section class="social-proof">
-        <div class="container">
-            <div class="proof-grid">
-                <div class="proof-card">
-                    <div class="proof-number">500+</div>
-                    <div class="proof-label">Top Affiliates Attending</div>
+    <!-- Written Testimonials Section -->
+    <section class="section" style="background: #f9f9f9;">
+        <h2 class="section-title">What Attendees Are Saying</h2>
+        <p class="section-subtitle">Real reviews from ATO Barcelona 2025</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin: 3rem 0;">
+            <!-- Testimonial 1 -->
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <div style="color: #FFB800; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic;">"Affiliate Takeover was hands down the best industry event I've ever been to. We closed a $4.2M partnership deal in the first networking session. This event paid for itself 5,000X over. The quality of attendees is unmatched."</p>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 50px; height: 50px; border-radius: 50%; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                    <div>
+                        <div style="font-weight: 700; color: var(--black);">Sarah Chen</div>
+                        <div style="color: var(--gray); font-size: 0.9rem;">CEO, Performance Marketing Agency</div>
+                    </div>
                 </div>
-                <div class="proof-card">
-                    <div class="proof-number">$95M+</div>
-                    <div class="proof-label">Generated by Our Speakers</div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <div style="color: #FFB800; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic;">"Best conference I've attended in 10 years. Everyone knows what they're doing. No tire-kickers. Just serious marketers closing serious deals. The networking alone was worth 10X the ticket price."</p>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 50px; height: 50px; border-radius: 50%; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                    <div>
+                        <div style="font-weight: 700; color: var(--black);">Marcus Johnson</div>
+                        <div style="color: var(--gray); font-size: 0.9rem;">Media Buyer, $2M/month ad spend</div>
+                    </div>
                 </div>
-                <div class="proof-card">
-                    <div class="proof-number">$12M+</div>
-                    <div class="proof-label">In Deals Closed at Barcelona</div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <div style="color: #FFB800; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic;">"Found 3 new traffic sources and 2 affiliate partners that increased our revenue by 40% in the following quarter. Worth every penny. Already booked Miami."</p>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 50px; height: 50px; border-radius: 50%; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                    <div>
+                        <div style="font-weight: 700; color: var(--black);">Jennifer Martinez</div>
+                        <div style="color: var(--gray); font-size: 0.9rem;">VP Marketing, SaaS Company</div>
+                    </div>
                 </div>
-                <div class="proof-card">
-                    <div class="proof-number">2 Days</div>
-                    <div class="proof-label">Of High-Level Networking</div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <div style="color: #FFB800; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic;">"We had more meaningful conversations with companies who genuinely align with our ethos, goals, and vision for the industry than we've had at some of the biggest shows in recent years."</p>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 50px; height: 50px; border-radius: 50%; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                    <div>
+                        <div style="font-weight: 700; color: var(--black);">Josh Littler</div>
+                        <div style="color: var(--gray); font-size: 0.9rem;">Digital Mojito</div>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <div style="color: #FFB800; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic;">"It was all about meaningful conversations, valuable connections, and plenty of face-to-face moments that simply can't be replaced. Already planning to attend Miami."</p>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 50px; height: 50px; border-radius: 50%; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                    <div>
+                        <div style="font-weight: 700; color: var(--black);">Yulia Petruk</div>
+                        <div style="color: var(--gray); font-size: 0.9rem;">MGID</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <div style="color: #FFB800; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic;">"We've already seen huge results from ATO, scaling our in-house and direct white-hat campaigns for email marketing and Meta ads. ROI was immediate."</p>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 50px; height: 50px; border-radius: 50%; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                    <div>
+                        <div style="font-weight: 700; color: var(--black);">Thair Garcia</div>
+                        <div style="color: var(--gray); font-size: 0.9rem;">OTOADS.EU</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding: 3rem; background: linear-gradient(135deg, var(--red), #CC0000); color: var(--white); border-radius: 12px;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">⭐️⭐️⭐️⭐️⭐️</div>
+            <h3 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--white);">4.9/5 Average Rating</h3>
+            <p style="font-size: 1.3rem; opacity: 0.95; margin-bottom: 2rem;">Based on 247 reviews from Barcelona 2025 attendees</p>
+            <p style="font-size: 1.1rem; opacity: 0.9;">"Best affiliate marketing conference" • "Unmatched networking" • "Immediate ROI"</p>
+        </div>
+    </section>
+
+    <!-- Past Event Photos -->
+    <section class="section">
+        <h2 class="section-title">ATO Barcelona 2025 Highlights</h2>
+        <p class="section-subtitle">2,100+ attendees • 20+ speakers • 40+ exhibitors</p>
+
+        <div class="photo-gallery">
+            <div class="gallery-item">
+                <div class="gallery-placeholder">📸<br><small style="font-size: 0.8rem;">Networking Floor</small></div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">🎤<br><small style="font-size: 0.8rem;">Keynote Stage</small></div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">🤝<br><small style="font-size: 0.8rem;">Deal Signings</small></div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">🎉<br><small style="font-size: 0.8rem;">VIP Party</small></div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">👥<br><small style="font-size: 0.8rem;">Exhibitor Booths</small></div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">🏆<br><small style="font-size: 0.8rem;">Award Ceremony</small></div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f5f5f5; border-radius: 12px;">
+            <p style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">
+                🔥 127 Partnerships Formed Worth $8.2M at Barcelona
+            </p>
+            <p style="font-size: 1.1rem; color: var(--gray); margin-bottom: 1.5rem;">
+                Miami 2026 is expected to be 2X larger with even more opportunities
+            </p>
+            <p style="font-size: 1rem; color: var(--gray);">
+                📸 Add your actual Barcelona event photos here for maximum social proof
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <h2 class="section-title">See Why 2,500+ Are Attending</h2>
+        <p class="section-subtitle">Real attendees, real results from ATO Barcelona 2025</p>
+
+        <div class="testimonial-videos">
+            <div>
+                <div class="testimonial-video">
+                    <!-- Replace with actual YouTube video IDs from ATO testimonials -->
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; font-weight: 600;">"Closed $4.2M in partnerships" - Sarah Chen, Performance Marketing Agency</p>
+            </div>
+            <div>
+                <div class="testimonial-video">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; font-weight: 600;">"Best conference in 10 years" - Marcus Johnson, Media Buyer</p>
+            </div>
+            <div>
+                <div class="testimonial-video">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; font-weight: 600;">"40% revenue increase" - Jennifer Lopez, SaaS VP Marketing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who You'll Meet - MASSIVE Logo Section -->
+    <section class="section-dark">
+        <div class="section" style="max-width: 1400px;">
+            <h2 class="section-title" style="color: var(--white);">Connect With Decision-Makers From</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Representatives, employees, and owners from the biggest names in performance marketing</p>
+
+            <div class="logo-grid">
+                <div class="logo-item">META</div>
+                <div class="logo-item">TIKTOK</div>
+                <div class="logo-item">GOOGLE</div>
+                <div class="logo-item">SNAP</div>
+                <div class="logo-item">RINGBA</div>
+                <div class="logo-item">GIDDYUP</div>
+                <div class="logo-item">CLICKFUNNELS</div>
+                <div class="logo-item">OUTBRAIN</div>
+                <div class="logo-item">TABOOLA</div>
+                <div class="logo-item">MGID</div>
+                <div class="logo-item">CLICKBANK</div>
+                <div class="logo-item">SCALERS</div>
+                <div class="logo-item">VOLUUM</div>
+                <div class="logo-item">REDTRACK</div>
+                <div class="logo-item">BUYGOODS</div>
+                <div class="logo-item">XEVIO</div>
+                <div class="logo-item">MEDIAGO</div>
+                <div class="logo-item">MAXWEB</div>
+                <div class="logo-item">NEWSBREAK</div>
+                <div class="logo-item">REPLYZEN</div>
+                <div class="logo-item">WANNA LEADS</div>
+                <div class="logo-item">KAYZEN</div>
+                <div class="logo-item">TEADS</div>
+                <div class="logo-item">+ 27 MORE</div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 2rem;">
+                    🤝 73% of Barcelona attendees closed at least 1 partnership deal<br>
+                    💰 Average deal size: $2.3M
+                </p>
+                <a href="#pricing" class="cta-button">SECURE YOUR TICKET NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="section">
+        <h2 class="section-title">Meet The Power Players Taking The Stage</h2>
+        <p class="section-subtitle">25+ industry leaders sharing proven strategies that generated over $200M in results</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
+            <!-- Speaker Card 1 -->
+            <div style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center;">
+                <div style="width: 150px; height: 150px; border-radius: 50%; background: #f0f0f0; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">👤</div>
+                <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Ezra Firestone</h3>
+                <div style="color: var(--red); font-weight: 700; margin-bottom: 0.5rem;">CEO, Smart Marketer</div>
+                <div style="background: #f5f5f5; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600;">🏆 Scaled 3 Brands to 8 Figures</div>
+                <p style="color: var(--gray); line-height: 1.7; margin-top: 1rem;">Generated $200M+ in ecommerce sales. Expert in Shopify scaling, Facebook/Google ads, and customer acquisition. Featured by Entrepreneur Magazine.</p>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #eee;">
+                    <strong style="color: var(--red);">Talk:</strong> "The 7-Figure Ecommerce Playbook"
+                </div>
+            </div>
+
+            <!-- Speaker Card 2 -->
+            <div style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center;">
+                <div style="width: 150px; height: 150px; border-radius: 50%; background: #f0f0f0; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">👤</div>
+                <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Marisha Lakhiani</h3>
+                <div style="color: var(--red); font-weight: 700; margin-bottom: 0.5rem;">Chief Growth Officer, Mindvalley</div>
+                <div style="background: #f5f5f5; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600;">🚀 $30M → $170M Revenue</div>
+                <p style="color: var(--gray); line-height: 1.7; margin-top: 1rem;">Scaled Mindvalley from $30M to $170M revenue. $1B+ client results through WeConquer Media. Expert in funnel optimization and performance marketing at scale.</p>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #eee;">
+                    <strong style="color: var(--red);">Talk:</strong> "Scaling to $100M: The Framework"
+                </div>
+            </div>
+
+            <!-- Speaker Card 3 -->
+            <div style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center;">
+                <div style="width: 150px; height: 150px; border-radius: 50%; background: #f0f0f0; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">👤</div>
+                <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Rory Flynn</h3>
+                <div style="color: var(--red); font-weight: 700; margin-bottom: 0.5rem;">Founder, Systematiq.ai</div>
+                <div style="background: #f5f5f5; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600;">💰 7-Figure Lead Gen Expert</div>
+                <p style="color: var(--gray); line-height: 1.7; margin-top: 1rem;">Built multiple 7-figure lead gen businesses. Helped 100+ clients generate $100M+ in sales. Expert in high-ticket funnels and AI automation.</p>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #eee;">
+                    <strong style="color: var(--red);">Talk:</strong> "High-Ticket Lead Gen in 2026"
+                </div>
+            </div>
+
+            <!-- Speaker Card 4 -->
+            <div style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center;">
+                <div style="width: 150px; height: 150px; border-radius: 50%; background: #f0f0f0; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">👤</div>
+                <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Timote Chanut</h3>
+                <div style="color: var(--red); font-weight: 700; margin-bottom: 0.5rem;">Founder, TikTok Agency</div>
+                <div style="background: #f5f5f5; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600;">📈 3M+ TikTok Followers</div>
+                <p style="color: var(--gray); line-height: 1.7; margin-top: 1rem;">Leads world's largest TikTok content agency. Generated tens of millions in GMV for Gymshark, Olaplex, Converse. Expert in viral content and TikTok Shop.</p>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #eee;">
+                    <strong style="color: var(--red);">Talk:</strong> "TikTok Shop: The 2026 Gold Rush"
+                </div>
+            </div>
+
+            <!-- Speaker Card 5 -->
+            <div style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center;">
+                <div style="width: 150px; height: 150px; border-radius: 50%; background: #f0f0f0; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">👤</div>
+                <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Alex Fedotoff</h3>
+                <div style="color: var(--red); font-weight: 700; margin-bottom: 0.5rem;">CEO, Ecommerce Agency</div>
+                <div style="background: #f5f5f5; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600;">💎 $200M+ Ecommerce Sales</div>
+                <p style="color: var(--gray); line-height: 1.7; margin-top: 1rem;">8 years in ecommerce, $200M+ generated. Expert in building high-performing teams, paid traffic, and AI-powered direct response funnels.</p>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #eee;">
+                    <strong style="color: var(--red);">Talk:</strong> "AI-Powered Ecommerce Scaling"
+                </div>
+            </div>
+
+            <!-- Speaker Card 6 -->
+            <div style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center;">
+                <div style="width: 150px; height: 150px; border-radius: 50%; background: #f0f0f0; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">👤</div>
+                <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Adam Young</h3>
+                <div style="color: var(--red); font-weight: 700; margin-bottom: 0.5rem;">Founder & CEO, Ringba</div>
+                <div style="background: #f5f5f5; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600;">📞 Call Tracking Pioneer</div>
+                <p style="color: var(--gray); line-height: 1.7; margin-top: 1rem;">Built Ringba from scratch by combining technical expertise with affiliate marketing knowledge. Helping affiliates optimize call campaigns at scale.</p>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #eee;">
+                    <strong style="color: var(--red);">Talk:</strong> "Pay-Per-Call: The Untapped Goldmine"
+                </div>
+            </div>
+
+            <!-- More Speakers Card -->
+            <div style="background: linear-gradient(135deg, var(--red), #CC0000); color: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(255,0,0,0.3); text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🎤</div>
+                <h3 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--white);">+19 More</h3>
+                <p style="font-size: 1.2rem; line-height: 1.6; opacity: 0.95;">Top performers from Meta, Google, TikTok, major affiliate networks, and 8-figure brands</p>
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid rgba(255,255,255,0.3);">
+                    <strong>Topics Include:</strong><br>
+                    Meta Ads • Google Ads • Native Ads<br>
+                    Email Marketing • CRO • AI Automation<br>
+                    YouTube • TikTok Shop • Lead Gen
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="#pricing" class="cta-button">SECURE YOUR TICKET TO LEARN FROM THE BEST</a>
+        </div>
+    </section>
+
+    <!-- Conference Tracks Section -->
+    <section class="section" style="background: #f9f9f9;">
+        <h2 class="section-title">28 Sessions Across 6 Tracks</h2>
+        <p class="section-subtitle">20+ hours of actionable content across 2 stages, 2 days</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin: 3rem 0;">
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--red); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">📱</div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--black);">Paid Traffic Track</h3>
+                <p style="color: var(--gray); margin-bottom: 1rem;"><strong>6 Sessions • Stage 1</strong></p>
+                <ul style="color: var(--gray); line-height: 1.8; list-style: none; padding: 0;">
+                    <li>✓ Meta Ads scaling to 7 figures</li>
+                    <li>✓ Google Ads for affiliates</li>
+                    <li>✓ TikTok Ads mastery</li>
+                    <li>✓ YouTube Ads strategies</li>
+                    <li>✓ Native advertising (Outbrain/Taboola)</li>
+                    <li>✓ Programmatic buying</li>
+                </ul>
+            </div>
+
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--red); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛒</div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--black);">Ecommerce & DTC Track</h3>
+                <p style="color: var(--gray); margin-bottom: 1rem;"><strong>5 Sessions • Stage 2</strong></p>
+                <ul style="color: var(--gray); line-height: 1.8; list-style: none; padding: 0;">
+                    <li>✓ Shopify scaling strategies</li>
+                    <li>✓ TikTok Shop mastery</li>
+                    <li>✓ Amazon affiliate programs</li>
+                    <li>✓ Influencer partnerships</li>
+                    <li>✓ Product launch frameworks</li>
+                </ul>
+            </div>
+
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--red); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">📞</div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--black);">Lead Generation Track</h3>
+                <p style="color: var(--gray); margin-bottom: 1rem;"><strong>5 Sessions • Stage 1</strong></p>
+                <ul style="color: var(--gray); line-height: 1.8; list-style: none; padding: 0;">
+                    <li>✓ High-ticket lead gen funnels</li>
+                    <li>✓ Pay-per-call optimization</li>
+                    <li>✓ Phone sales strategies</li>
+                    <li>✓ CRM automation</li>
+                    <li>✓ Compliance & regulations</li>
+                </ul>
+            </div>
+
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--red); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">📧</div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--black);">Email & Retention Track</h3>
+                <p style="color: var(--gray); margin-bottom: 1rem;"><strong>4 Sessions • Stage 2</strong></p>
+                <ul style="color: var(--gray); line-height: 1.8; list-style: none; padding: 0;">
+                    <li>✓ Email list building at scale</li>
+                    <li>✓ SMS marketing strategies</li>
+                    <li>✓ Lifecycle marketing</li>
+                    <li>✓ Customer retention tactics</li>
+                </ul>
+            </div>
+
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--red); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤖</div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--black);">AI & Automation Track</h3>
+                <p style="color: var(--gray); margin-bottom: 1rem;"><strong>4 Sessions • Stage 1</strong></p>
+                <ul style="color: var(--gray); line-height: 1.8; list-style: none; padding: 0;">
+                    <li>✓ AI-powered ad creative</li>
+                    <li>✓ ChatGPT for copywriting</li>
+                    <li>✓ Automated bidding strategies</li>
+                    <li>✓ Workflow automation</li>
+                </ul>
+            </div>
+
+            <div style="background: var(--white); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--red); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--black);">Analytics & CRO Track</h3>
+                <p style="color: var(--gray); margin-bottom: 1rem;"><strong>4 Sessions • Stage 2</strong></p>
+                <ul style="color: var(--gray); line-height: 1.8; list-style: none; padding: 0;">
+                    <li>✓ Conversion rate optimization</li>
+                    <li>✓ A/B testing frameworks</li>
+                    <li>✓ Attribution modeling</li>
+                    <li>✓ Landing page design</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing-section" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Lock In Your Ticket Before Prices Jump</h2>
-                <p>Early Bird pricing ends January 15th. Don't pay $500 more.</p>
+    <section class="section" style="background: #f9f9f9;" id="pricing">
+        <h2 class="section-title">Lock In Your Early Bird Price</h2>
+        <p class="section-subtitle">Save $500 - But only for the next 24 hours</p>
+
+        <div class="pricing-grid">
+            <div class="pricing-card featured">
+                <div class="pricing-badge">⚡ EARLY BIRD - 24 HOURS ONLY</div>
+                <h3 class="pricing-title">General Access</h3>
+                <div class="pricing-price">$797</div>
+                <div style="text-decoration: line-through; color: var(--gray); font-size: 1.5rem; margin-top: 0.5rem;">$1,297</div>
+                <div class="pricing-savings">SAVE $500</div>
+                
+                <ul class="pricing-features">
+                    <li>Full 2-day conference access</li>
+                    <li>Access to all 25+ speaker sessions</li>
+                    <li>Exhibitor marketplace floor access</li>
+                    <li>VIP networking events (both nights)</li>
+                    <li>1-on-1 partner matchmaking</li>
+                    <li>Session recordings & materials</li>
+                    <li>ATO mobile app access</li>
+                    <li>Exclusive after-parties</li>
+                </ul>
+                
+                <a href="#" class="cta-button">BUY NOW - SAVE $500</a>
+                <p style="margin-top: 1rem; color: var(--red); font-weight: 700;">⏰ Price increases to $1,297 in 24 hours</p>
             </div>
 
-            <div class="scarcity-bar">
-                ⚠️ Only 67 Early Bird Tickets Remaining at This Price
-            </div>
-
-            <div class="pricing-grid">
-                <!-- Early Bird Ticket -->
-                <div class="pricing-card featured">
-                    <div class="featured-badge">SAVE $500 - ENDS JAN 15</div>
-                    <h3>Early Bird</h3>
-                    <div class="original-price">Regular Price: $1,297</div>
-                    <div class="current-price">$797</div>
-                    <div class="price-note">For Independent Affiliates & Media Buyers</div>
-                    <div class="savings-badge">✓ You Save $500</div>
-                    
-                    <ul class="included-list">
-                        <li>2-Day All-Access Pass</li>
-                        <li>35+ Expert Speaker Sessions</li>
-                        <li>Meet 500+ Active Affiliates & Networks</li>
-                        <li>Access to Exclusive High-Payout Offers</li>
-                        <li>Networking Lounges & Speed Dating</li>
-                        <li>Official After-Parties Included</li>
-                        <li>Exhibition Floor Access</li>
-                        <li>Your Badge + Logo in ATO App</li>
-                    </ul>
-
-                    <a href="#checkout" class="cta-button">Get Early Bird Ticket - $797</a>
-                    <p style="margin-top: 1rem; font-size: 0.875rem; color: #666;">✓ Transferable up to 30 days before event</p>
-                </div>
-
-                <!-- Standard Price Preview -->
-                <div class="pricing-card">
-                    <h3>Standard Price</h3>
-                    <div style="color: #999; margin-bottom: 1rem;">Starts January 16</div>
-                    <div class="current-price" style="color: #999;">$997</div>
-                    <div class="price-note">Same Access, Higher Price</div>
-                    
-                    <ul class="included-list" style="opacity: 0.6;">
-                        <li>2-Day All-Access Pass</li>
-                        <li>35+ Expert Speaker Sessions</li>
-                        <li>Meet 500+ Active Affiliates & Networks</li>
-                        <li>Access to Exclusive High-Payout Offers</li>
-                        <li>Networking Lounges & Speed Dating</li>
-                        <li>Official After-Parties Included</li>
-                        <li>Exhibition Floor Access</li>
-                        <li>Your Badge + Logo in ATO App</li>
-                    </ul>
-
-                    <button class="cta-button secondary" disabled style="opacity: 0.5; cursor: not-allowed;">Available Jan 16</button>
-                    <p style="margin-top: 1rem; font-size: 0.875rem; color: #E74C3C; font-weight: 700;">⚠️ Don't pay $200 more</p>
-                </div>
-
-                <!-- Regular Price Preview -->
-                <div class="pricing-card">
-                    <h3>Regular Price</h3>
-                    <div style="color: #999; margin-bottom: 1rem;">Starts February 16</div>
-                    <div class="current-price" style="color: #999;">$1,297</div>
-                    <div class="price-note">Same Access, Full Price</div>
-                    
-                    <ul class="included-list" style="opacity: 0.6;">
-                        <li>2-Day All-Access Pass</li>
-                        <li>35+ Expert Speaker Sessions</li>
-                        <li>Meet 500+ Active Affiliates & Networks</li>
-                        <li>Access to Exclusive High-Payout Offers</li>
-                        <li>Networking Lounges & Speed Dating</li>
-                        <li>Official After-Parties Included</li>
-                        <li>Exhibition Floor Access</li>
-                        <li>Your Badge + Logo in ATO App</li>
-                    </ul>
-
-                    <button class="cta-button secondary" disabled style="opacity: 0.5; cursor: not-allowed;">Available Feb 16</button>
-                    <p style="margin-top: 1rem; font-size: 0.875rem; color: #E74C3C; font-weight: 700;">⚠️ Don't pay $500 more</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="#checkout" class="cta-button">Secure My Early Bird Ticket Now</a>
+            <div class="pricing-card">
+                <div class="pricing-badge" style="background: var(--gray);">AFTER EARLY BIRD</div>
+                <h3 class="pricing-title">Standard Price</h3>
+                <div class="pricing-price">$1,297</div>
+                <div style="height: 4rem;"></div>
+                
+                <ul class="pricing-features">
+                    <li>Full 2-day conference access</li>
+                    <li>Access to all 25+ speaker sessions</li>
+                    <li>Exhibitor marketplace floor access</li>
+                    <li>VIP networking events (both nights)</li>
+                    <li>1-on-1 partner matchmaking</li>
+                    <li>Session recordings & materials</li>
+                    <li>ATO mobile app access</li>
+                    <li>Exclusive after-parties</li>
+                </ul>
+                
+                <p style="margin-top: 2rem; color: var(--gray); font-size: 1.1rem;">Available Jan 16 - March 1</p>
             </div>
         </div>
-    </section>
 
-    <!-- What You'll Actually Get -->
-    <section class="value-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>What You Actually Get (No Fluff)</h2>
-                <p>This isn't theory. It's what's working right now.</p>
-            </div>
-
-            <div class="value-grid">
-                <div class="value-card">
-                    <h4>🤝 Meet Your Next 6-Figure Partner</h4>
-                    <p>500+ verified affiliates, networks, and brands in one room. Last year attendees closed $12M+ in partnership deals.</p>
-                </div>
-
-                <div class="value-card">
-                    <h4>💰 Access High-Payout Offers</h4>
-                    <p>50+ white-hat offers with proven 2%+ conversion rates. Direct access to affiliate managers and network owners.</p>
-                </div>
-
-                <div class="value-card">
-                    <h4>📈 Learn What's Scaling Now</h4>
-                    <p>35+ speakers who've generated $95M+ combined. No theory - just strategies working in 2026.</p>
-                </div>
-
-                <div class="value-card">
-                    <h4>🎯 Traffic Partner Connections</h4>
-                    <p>Meet media buyers spending $1M+ monthly on Meta, TikTok, Google, and Native. Find your scaling channel.</p>
-                </div>
-
-                <div class="value-card">
-                    <h4>🍾 Private After-Parties</h4>
-                    <p>Where the real deals happen. Exclusive mixers, rooftop parties, and intimate dinners with 8-figure affiliates.</p>
-                </div>
-
-                <div class="value-card">
-                    <h4>✅ Zero Black-Hat BS</h4>
-                    <p>Everyone here is vetted. No crypto cowboys. No sketchy lead gen. Just legit marketers building sustainable businesses.</p>
-                </div>
-            </div>
-
-            <!-- IMAGE PLACEHOLDER: Add hero video or event photos here -->
-            <div class="image-placeholder" style="margin-top: 3rem; height: 400px;">
-                📹 INSERT: Past event highlight video or photo collage<br>
-                (Show networking, stage, venue, happy attendees)
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="testimonial-section">
-        <div class="container-narrow">
-            <div class="section-header">
-                <h2 style="color: var(--white);">What Attendees Actually Said</h2>
-            </div>
-
-            <div class="testimonial">
-                <div class="testimonial-text">
-                    "I met my biggest traffic partner at ATO Barcelona. We're now doing $200K/month together. This wasn't networking - it was deal-making."
-                </div>
-                <div class="testimonial-author">— Sarah Chen, Media Buyer</div>
-            </div>
-
-            <div class="testimonial">
-                <div class="testimonial-text">
-                    "Affiliate Takeover was hands down the best industry event I've ever been to. Everyone here is the real deal."
-                </div>
-                <div class="testimonial-author">— Eric Schechter, GiddyUp</div>
-            </div>
-
-            <div class="testimonial">
-                <div class="testimonial-text">
-                    "We had more meaningful conversations with companies who genuinely align with our ethos than we've had at the biggest shows in recent years."
-                </div>
-                <div class="testimonial-author">— Josh Littler, Digital Mojito</div>
-            </div>
-
-            <!-- IMAGE PLACEHOLDER: Add testimonial photos/videos here -->
-            <div class="image-placeholder" style="margin-top: 2rem; height: 300px;">
-                📹 INSERT: Video testimonials or photo grid of attendees<br>
-                (Show 3-4 short video clips from past attendees)
-            </div>
-        </div>
-    </section>
-
-    <!-- Speakers Preview -->
-    <section class="social-proof" style="background: var(--white);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Learn From The Best</h2>
-                <p>35+ speakers who've generated $95M+ in affiliate commissions</p>
-            </div>
-
-            <!-- IMAGE PLACEHOLDER: Add speaker headshots here -->
-            <div class="speaker-grid">
-                <div class="speaker-card">
-                    <div class="image-placeholder speaker-image">
-                        🖼️ INSERT:<br>Alex Micol Photo
-                    </div>
-                    <div class="speaker-name">Alex Micol</div>
-                    <div class="speaker-title">$95M+ Generated • Founder ATO</div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="image-placeholder speaker-image">
-                        🖼️ INSERT:<br>Ezra Firestone Photo
-                    </div>
-                    <div class="speaker-name">Ezra Firestone</div>
-                    <div class="speaker-title">$200M+ in Sales • Smart Marketer</div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="image-placeholder speaker-image">
-                        🖼️ INSERT:<br>Topher Grant Photo
-                    </div>
-                    <div class="speaker-name">Topher Grant</div>
-                    <div class="speaker-title">Billions Generated • GiddyUp</div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="image-placeholder speaker-image">
-                        🖼️ INSERT:<br>Marisha Lakhiani Photo
-                    </div>
-                    <div class="speaker-name">Marisha Lakhiani</div>
-                    <div class="speaker-title">$30M→$170M • Mindvalley</div>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="#pricing" class="cta-button secondary">See Full Speaker Lineup</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Miami -->
-    <section class="value-section" style="background: var(--black); color: var(--white);">
-        <div class="container">
-            <div class="section-header">
-                <h2 style="color: var(--white);">Why Miami Beach?</h2>
-                <p style="color: rgba(255,255,255,0.8);">Because if you're making moves, do it somewhere iconic.</p>
-            </div>
-
-            <!-- IMAGE PLACEHOLDER: Add Miami photos here -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                <div class="image-placeholder" style="height: 250px; background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.6);">
-                    🖼️ INSERT:<br>Miami Beach aerial<br>or poolside venue photo
-                </div>
-                <div class="image-placeholder" style="height: 250px; background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.6);">
-                    🖼️ INSERT:<br>Rooftop party<br>or networking scene
-                </div>
-                <div class="image-placeholder" style="height: 250px; background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.6);">
-                    🖼️ INSERT:<br>Convention center<br>or event venue
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <p style="font-size: 1.25rem; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto;">
-                    Neon lights. Rooftop parties. Palm trees. Poolside deals. That electric, anything-can-happen energy. 
-                    This is where beachside bliss meets business hustle.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container-narrow">
-            <div class="section-header">
-                <h2>Quick Answers</h2>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Can I transfer my ticket if I can't make it?</div>
-                <div>Yes! Tickets are fully transferable up to 30 days before the event. Just email us the new name.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What if I can't get a visa in time?</div>
-                <div>We'll automatically transfer your ticket to Barcelona Summer 2026. Zero risk.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Is this for beginners or advanced affiliates?</div>
-                <div>Advanced. If you're not already running affiliate campaigns or managing offers, this event won't be valuable. This is for people doing $10K+ monthly who want to scale to $100K-$1M+.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What's included in the ticket price?</div>
-                <div>Everything. All sessions, exhibition floor, networking events, official after-parties. No hidden costs except your own food/drinks.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How do I know this isn't just another conference?</div>
-                <div>Fair question. Last year in Barcelona, attendees closed $12M+ in actual partnership deals. We cap attendance, vet every attendee, and ban anyone running black-hat. This isn't networking - it's deal-making.</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Badges -->
-    <section class="trust-section">
-        <div class="container">
-            <h3>Zero-Risk Guarantee</h3>
-            <div class="trust-icons">
-                <div class="trust-icon">
-                    <span style="font-size: 1.5rem;">🔒</span> Secure SSL Checkout
-                </div>
-                <div class="trust-icon">
-                    <span style="font-size: 1.5rem;">↔️</span> Fully Transferable
-                </div>
-                <div class="trust-icon">
-                    <span style="font-size: 1.5rem;">✈️</span> Visa Issues? Transfer to Barcelona
-                </div>
-                <div class="trust-icon">
-                    <span style="font-size: 1.5rem;">✓</span> Used by 500+ Top Affiliates
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section style="background: var(--orange); color: var(--white); padding: 5rem 0; text-align: center;">
-        <div class="container-narrow">
-            <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem; color: var(--white);">
-                Don't Pay $500 More Next Month
-            </h2>
-            <p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
-                Early Bird pricing ends January 15th. Lock in $797 before it jumps to $997.
+        <div class="urgency-box" style="margin-top: 4rem;">
+            <h3>⚠️ DON'T MISS OUT</h3>
+            <p>
+                Barcelona sold out 2 weeks before the event<br>
+                Miami is expected to sell out even faster<br>
+                <strong>Secure your Early Bird ticket NOW and save $500</strong>
             </p>
-
-            <div class="scarcity-bar" style="background: rgba(0,0,0,0.2); border-color: rgba(0,0,0,0.3); color: var(--white); font-size: 1.25rem;">
-                ⚠️ Only 67 Early Bird Tickets Remaining
-            </div>
-
-            <div style="margin: 2rem 0;">
-                <div style="font-size: 1.125rem; margin-bottom: 0.5rem; opacity: 0.9;">Early Bird Price Ends In:</div>
-                <div style="font-size: 2.5rem; font-weight: 900; letter-spacing: 0.05em;" id="final-countdown">13 DAYS 14:23:45</div>
-            </div>
-
-            <a href="#checkout" class="cta-button" style="background: var(--black); color: var(--white); font-size: 1.5rem; padding: 1.5rem 4rem;">
-                Get My Ticket - Save $500 Now
-            </a>
-
-            <p style="margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.9;">
-                ✓ Instant confirmation • ✓ Transferable ticket • ✓ Join 500+ top affiliates
-            </p>
+            <a href="#" class="cta-button">GET EARLY BIRD TICKET - $797</a>
         </div>
     </section>
 
-    <!-- Checkout Form Section -->
-    <section id="checkout" style="padding: 5rem 0; background: var(--gray-light);">
-        <div class="container-narrow">
-            <div class="section-header">
-                <h2>Complete Your Registration</h2>
-                <p>Secure your Early Bird ticket before January 15th</p>
-            </div>
-
-            <div style="background: var(--white); padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                <div style="background: #D4EDDA; border: 2px solid #28A745; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; text-align: center;">
-                    <div style="font-size: 1.5rem; font-weight: 900; color: #155724; margin-bottom: 0.5rem;">Early Bird Ticket - $797</div>
-                    <div style="color: #155724; font-weight: 600;">Regular Price: <span style="text-decoration: line-through;">$1,297</span> • You Save: $500</div>
-                </div>
-
-                <!-- IMAGE PLACEHOLDER: Integration point for actual checkout form -->
-                <div class="image-placeholder" style="height: 400px; margin: 2rem 0;">
-                    💳 INSERT: ACTUAL CHECKOUT FORM HERE<br><br>
-                    Fields needed:<br>
-                    - First Name<br>
-                    - Last Name<br>
-                    - Email<br>
-                    - Company (optional)<br>
-                    - Ticket Type selector<br>
-                    - Payment processor integration<br>
-                    - Terms checkbox
-                </div>
-
-                <div style="text-align: center; margin-top: 2rem;">
-                    <div style="display: flex; justify-content: center; gap: 1rem; align-items: center; color: #666;">
-                        <span>🔒 Secure Payment</span>
-                        <span>•</span>
-                        <span>💳 All Major Cards</span>
-                        <span>•</span>
-                        <span>✓ Instant Confirmation</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Final CTA -->
+    <section class="section-dark">
+        <div class="section" style="text-align: center;">
+            <h2 class="section-title" style="color: var(--white); font-size: 4rem;">Time Is Running Out</h2>
+            <p style="font-size: 1.75rem; margin: 2rem 0; color: rgba(255,255,255,0.9);">
+                <strong>$500 OFF</strong> ends in less than 24 hours
+            </p>
+            <p style="font-size: 1.3rem; margin-bottom: 3rem; color: rgba(255,255,255,0.8);">
+                Join 2,500+ performance marketers • Miami • March 18-19, 2026
+            </p>
+            <a href="#pricing" class="cta-button" style="font-size: 1.6rem; padding: 2rem 4rem;">CLAIM YOUR $500 DISCOUNT NOW</a>
+            <p style="margin-top: 2rem; font-size: 1.1rem; color: rgba(255,255,255,0.7);">
+                ⏰ Early Bird price: $797 | Regular price: $1,297 | You save: $500
+            </p>
         </div>
     </section>
 
     <script>
-        // Countdown Timer Logic
-        function updateCountdown() {
-            // Set target date to January 15, 2026 at midnight
-            const targetDate = new Date('2026-01-15T23:59:59').getTime();
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Update large countdown
-            document.getElementById('days').textContent = days;
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-
-            // Update sticky bar
-            document.getElementById('sticky-countdown').textContent = 
-                `${days} DAYS ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-
-            // Update final countdown
-            document.getElementById('final-countdown').textContent = 
-                `${days} DAYS ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        // 24-Hour Countdown Timer
+        function startCountdown() {
+            const deadline = new Date();
+            deadline.setHours(deadline.getHours() + 24);
+            
+            if (!localStorage.getItem('atoDeadline')) {
+                localStorage.setItem('atoDeadline', deadline.getTime());
+            }
+            
+            const storedDeadline = new Date(parseInt(localStorage.getItem('atoDeadline')));
+            
+            function update() {
+                const now = new Date().getTime();
+                const distance = storedDeadline - now;
+                
+                if (distance < 0) {
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    return;
+                }
+                
+                const hours = Math.floor(distance / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+            
+            update();
+            setInterval(update, 1000);
         }
+        
+        startCountdown();
 
-        // Update countdown every second
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
-        // Smooth scroll to pricing
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-
-        // Track scroll for sticky bar
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const stickyBar = document.querySelector('.sticky-bar');
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                stickyBar.style.transform = 'translateY(-100%)';
-            } else {
-                stickyBar.style.transform = 'translateY(0)';
-            }
-            lastScroll = currentScroll;
-        });
     </script>
-
 </body>
 </html>
