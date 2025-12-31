@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Takeover - Conversion Optimization Proposal | WeConquer Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --red: #FF0000;
+            --gray-light: #F5F5F5;
+            --gray-dark: #1A1A1A;
+            --gray-medium: #666666;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: clamp(1.25rem, 2vw, 1.75rem);
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .big-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 8vw, 8rem);
+            line-height: 0.9;
+            color: var(--red);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--black);
+            color: var(--white);
+            padding: 8rem 0 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: var(--red);
+            opacity: 0.1;
+            transform: skewX(-15deg);
+            transform-origin: top right;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .hero-meta span {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-meta strong {
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.25rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-dark {
+            background: var(--gray-dark);
+            color: var(--white);
+        }
+
+        .section-light {
+            background: var(--gray-light);
+        }
+
+        .section-accent {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: var(--black);
+            color: var(--white);
+            padding: 0.375rem 1rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-accent .section-label {
+            background: var(--white);
+            color: var(--red);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 2rem;
+            border-left: 4px solid var(--red);
+        }
+
+        .section-dark .stat-card {
+            background: var(--black);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray-medium);
+        }
+
+        .section-dark .stat-label {
+            color: var(--gray-light);
+        }
+
+        /* Problem Cards */
+        .problem-cards {
+            display: grid;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .problem-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border: 2px solid var(--gray-light);
+            position: relative;
+        }
+
+        .problem-card.critical {
+            border-color: var(--red);
+            background: #FFF5F5;
+        }
+
+        .problem-number {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: var(--gray-light);
+            line-height: 1;
+        }
+
+        .problem-card.critical .problem-number {
+            color: rgba(255, 0, 0, 0.1);
+        }
+
+        .priority-badge {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        /* Solution Grid */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .solution-card {
+            background: var(--white);
+            padding: 2rem;
+            border-top: 4px solid var(--black);
+        }
+
+        .section-dark .solution-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-top-color: var(--red);
+        }
+
+        .solution-card h4 {
+            margin-top: 1rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 3rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--red);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: var(--red);
+            border-radius: 50%;
+        }
+
+        .timeline-week {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--red);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Table */
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+
+        thead {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        tbody tr:hover {
+            background: var(--gray-light);
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: var(--black);
+            color: var(--white);
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-box .big-number {
+            display: block;
+            margin: 1rem 0;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: var(--gray-light);
+            padding: 2rem;
+            border-left: 4px solid var(--red);
+            margin: 2rem 0;
+        }
+
+        .highlight-box strong {
+            color: var(--red);
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            color: var(--red);
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+
+        .crosslist {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .crosslist li::before {
+            content: '✗';
+            color: var(--red);
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+
+        /* Quote/Callout */
+        .callout {
+            background: var(--red);
+            color: var(--white);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .proposal-footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .signature-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .signature {
+            padding: 2rem;
+            border: 2px solid var(--gray-dark);
+        }
+
+        .signature-line {
+            border-top: 2px solid var(--white);
+            margin: 2rem 0 0.5rem;
+            padding-top: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 6rem 0 4rem;
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .stats-grid,
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-item::before {
+                left: -2.5rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .hero {
+                padding: 4rem 0;
+                break-after: page;
+            }
+
+            section {
+                break-inside: avoid;
+                padding: 2rem 0;
+            }
+
+            .problem-card,
+            .solution-card {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label">CONVERSION OPTIMIZATION PROPOSAL</div>
+                <h1>Affiliate Takeover:<br>Fix The Funnel,<br>Close The Sales</h1>
+                <p style="font-size: 1.5rem; opacity: 0.9; max-width: 800px;">We're driving 20,134 clicks at excellent CPCs. Zero conversions. The problem isn't traffic—it's the website. Here's how we fix it.</p>
+                <div class="hero-meta">
+                    <span>
+                        <strong>Prepared By</strong>
+                        WeConquer Media
+                    </span>
+                    <span>
+                        <strong>Date</strong>
+                        December 31, 2024
+                    </span>
+                    <span>
+                        <strong>Client</strong>
+                        Affiliate Takeover Miami 2026
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Executive Summary -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Executive Summary</div>
+                <h2>The Numbers Don't Lie</h2>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">20,134</div>
+                    <div class="stat-label">Link Clicks Delivered</div>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">✓ Excellent traffic quality</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$0.64</div>
+                    <div class="stat-label">Cost Per Click</div>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">✓ Efficient spend</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$13K+</div>
+                    <div class="stat-label">Total Spend to Date</div>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">Nov 26 - Dec 18</p>
+                </div>
+                <div class="stat-card" style="border-left-color: var(--black);">
+                    <div class="stat-value" style="color: var(--black);">0</div>
+                    <div class="stat-label" style="color: var(--red);">Conversions / Tickets Sold</div>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">✗ Website is the bottleneck</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>The Critical Problem:</h4>
+                <p style="margin: 0;"><strong>Only 1,465 of 20,134 clicks (7.3%) reached your landing page.</strong> That's a 92.3% gap—meaning most people click but never see your page. Industry standard is 30%+.</p>
+            </div>
+
+            <div class="callout">
+                "We're paying ~$8.88 for each person who actually sees your page instead of $0.65. That's 13X more expensive than it should be. Fix the page speed, add clear pricing and urgency, and this same traffic converts at 2-3%—that's 30-44 tickets from the same $13K spent instead of 0."
+            </div>
+        </div>
+    </section>
+
+    <!-- The Smoking Gun -->
+    <section class="section-accent">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Data</div>
+                <h2 style="color: var(--white);">85.6% Bounce Rate = Catastrophic Page Load Problem</h2>
+            </div>
+
+            <div class="big-number" style="margin: 2rem 0; color: var(--white);">$2,200</div>
+            <p style="font-size: 1.5rem; margin-bottom: 2rem; color: var(--white);">Out of $2,604 spent is wasted on people who bounce before seeing your page.</p>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; margin: 2rem 0;">
+                <h3 style="color: var(--white); margin-bottom: 1rem;">What's Happening:</h3>
+                <ol style="color: var(--white); font-size: 1.25rem;">
+                    <li>User clicks ad on mobile</li>
+                    <li>Page takes 6-8 seconds to load (estimated from drop-off rate)</li>
+                    <li>User gives up and closes tab</li>
+                    <li>You just paid $0.13 for nothing</li>
+                </ol>
+            </div>
+
+            <p style="font-size: 1.25rem; font-weight: 600; color: var(--white);">Fix page speed to <3 seconds → Recover 60% of lost traffic → 8,000+ additional landing page views from same ad spend</p>
+        </div>
+    </section>
+
+    <!-- Critical Issues -->
+    <section class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Issues Blocking Conversions</div>
+                <h2>What's Wrong & Why It Matters</h2>
+            </div>
+
+            <div class="problem-cards">
+                <div class="problem-card critical">
+                    <span class="problem-number">1</span>
+                    <div class="priority-badge">🚨 Critical</div>
+                    <h3>Catastrophic Page Load Problem</h3>
+                    <p><strong>The Data:</strong> 20,134 clicks → 1,465 landing page views = 92.7% drop-off before page loads</p>
+                    <p><strong>Root Causes:</strong> Heavy background images/patterns, unoptimized assets, too many scripts loading before content renders, poor mobile performance</p>
+                    <p style="color: var(--red); font-weight: 600; margin-top: 1rem;">This is the #1 conversion killer. Even a perfect landing page can't convert visitors who never see it.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">2</span>
+                    <h3>No Pricing Transparency</h3>
+                    <p>Visitors cannot see ticket prices anywhere on homepage. They must navigate through multiple pages to find vague "buy tickets" CTAs with no pricing.</p>
+                    <p><strong>Impact:</strong> Massive drop-off. Conference tickets typically range $500-$2,000. Without transparency, prospects assume the worst or leave.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">3</span>
+                    <h3>Weak Value Proposition (Compared to Competitor)</h3>
+                    <p><strong>ATO Current:</strong> "The New White-Hat Era of Affiliate Marketing" (positioning, not benefit)</p>
+                    <p><strong>Affiliate World (Direct Competitor):</strong> "Access to over 300+ advertisers, traffic sources, networks" + "Over 20 hours of expert-level content" + "300+ advertisers on marketplace"</p>
+                    <p><strong>What ATO Needs:</strong> "Connect with 200+ affiliates doing $100K-$1M/month and close partnership deals in 48 hours"</p>
+                    <div style="background: rgba(255,107,53,0.1); padding: 1rem; margin-top: 1rem; border-radius: 4px;">
+                        <strong style="color: var(--red);">Missing from ATO website:</strong>
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li>Number of exhibitors/sponsors</li>
+                            <li>Number of attendees</li>
+                            <li>Hours of content/number of speakers</li>
+                            <li>Specific networking outcomes</li>
+                            <li>ROI framework or deal value examples</li>
+                            <li>No clear answer to "What will I gain?"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">4</span>
+                    <h3>Poor Visual Hierarchy & Readability</h3>
+                    <p>Low contrast between text and background patterns, decorative elements competing with key information, difficult to scan, colors create visual fatigue.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">5</span>
+                    <h3>No Dedicated Urgency Landing Page</h3>
+                    <p>Countdown timer on homepage doesn't drive action because no clear before/after pricing shown, no scarcity messaging, timer just counts to event date not price increase.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">6</span>
+                    <h3>Confusing Checkout Flow (3-4 Clicks to Purchase)</h3>
+                    <p><strong>Current Flow:</strong> User must click 3-4 times before reaching checkout - multiple CTAs competing (Miami vs Barcelona), unclear ticket types, excessive steps causing cart abandonment</p>
+                    <p><strong>What's Needed:</strong> Single-click to checkout. User clicks "Buy Early Bird Ticket $797" → Immediately lands on payment form. Every additional click = 30% drop-off.</p>
+                    <p style="color: var(--red); font-weight: 600; margin-top: 0.5rem;">Industry Standard: 1 click from landing page to checkout. Each extra click loses 30% of buyers.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-number">7</span>
+                    <h3>Generic Social Proof</h3>
+                    <p>Logo carousel without context (Meta, TikTok logos mean nothing without "500 employees from these companies attended"). No specific outcomes in testimonials.</p>
+                    <p><strong>What converts:</strong> "127 partnerships worth $8.2M formed at ATO Barcelona 2025"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Evidence -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Evidence</div>
+                <h2 style="color: var(--white);">Current Performance Data (Dec 18-21, 2024)</h2>
+                <p style="color: rgba(255,255,255,0.8);">Screenshots from Meta Ads Manager proving the exact issues</p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+                <h3 style="color: var(--white); margin-bottom: 1rem;">📊 Traffic Performance: Excellent</h3>
+                <div style="background: var(--white); padding: 1rem; border-radius: 4px;">
+                    <img src="images/traffic-screenshot.png" alt="Meta Ads Manager showing excellent traffic delivery" style="width: 100%; height: auto; display: block; border: 1px solid #ddd;">
+                    <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #666; font-style: italic;">Meta Ads Manager: Nov 26 - Dec 18, 2024 - Showing excellent traffic delivery</p>
+                </div>
+                <div style="color: var(--white); margin-top: 1rem;">
+                    <strong>Key Metrics:</strong>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>20,134 link clicks delivered</li>
+                        <li>$0.03-$0.18 CPC (excellent rates)</li>
+                        <li>CTR: 0.39-4.85% (strong performance)</li>
+                        <li>Total spend: $13,000+ to date</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,107,53,0.1); padding: 2rem; border-radius: 8px; border: 2px solid var(--red); margin-bottom: 2rem;">
+                <h3 style="color: var(--red); margin-bottom: 1rem;">🚨 Conversion Disaster: 92.3% Not Even Reaching Landing Page</h3>
+                <div style="background: var(--white); padding: 1rem; border-radius: 4px;">
+                    <img src="images/bounce-rate-screenshot.png" alt="Showing massive waste - $2,200 out of $2,604 spent wasted" style="width: 100%; height: auto; display: block; border: 1px solid #ddd;">
+                    <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #666; font-style: italic;">85.6% bounce rate = catastrophic page load problem - $2,200 wasted</p>
+                </div>
+                <div style="color: var(--white); margin-top: 1rem;">
+                    <strong>The Problem:</strong>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li><strong>20,134 clicks → Only 1,465 landing page views (7.3% view rate)</strong></li>
+                        <li>92.3% of people click but NEVER see your page</li>
+                        <li>Page takes 6-8 seconds to load (industry standard: <3 seconds)</li>
+                        <li>Cost per LP view: ~$8.88 (should be $0.65)</li>
+                        <li><strong>Result: 0 tickets sold despite $13,000+ spent</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+                <h3 style="color: var(--white); margin-bottom: 1rem;">⚠️ Challenge 1: Facebook CAPI Not Implemented</h3>
+                <div style="background: var(--white); padding: 1rem; border-radius: 4px;">
+                    <img src="images/meta-capi-missing.png" alt="Meta Events Manager showing no CAPI setup - browser events only" style="width: 100%; height: auto; display: block; border: 1px solid #ddd;">
+                    <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #666; font-style: italic;">Meta Events Manager: "No event parameters were detected" - CAPI not implemented, only browser pixel firing</p>
+                </div>
+                <div style="color: var(--white); margin-top: 1rem;">
+                    <strong>The Issue:</strong>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Only browser-based pixel tracking (not server-side CAPI)</li>
+                        <li>"No event parameters were detected" = Facebook can't optimize</li>
+                        <li>Events received from Browser: 861 | Events received by integration: 861</li>
+                        <li>Missing transaction value, content IDs, and other critical parameters</li>
+                        <li><strong>Result: Facebook algorithm has no data to optimize toward high-value purchasers</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+                <h3 style="color: var(--white); margin-bottom: 1rem;">⚠️ Challenge 2: GA4 vs Meta 3X Discrepancy</h3>
+                <div style="background: var(--white); padding: 1rem; border-radius: 4px;">
+                    <img src="images/ga4-vs-meta-pageviews.png" alt="Google Analytics shows ~5K page views vs Meta showing ~16.5K" style="width: 100%; height: auto; display: block; border: 1px solid #ddd;">
+                    <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #666; font-style: italic;">Google Analytics: 10,983 total events vs Meta Events Manager: 16.5K page views - proves tracking inconsistency</p>
+                </div>
+                <div style="color: var(--white); margin-top: 1rem;">
+                    <strong>The Issue:</strong>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Meta shows significantly more page views than Google Analytics</li>
+                        <li>Indicates pixel is firing incorrectly or duplicate events</li>
+                        <li>Cannot trust conversion data when platforms don't align</li>
+                        <li><strong>Result: Impossible to accurately measure ROI or optimize campaigns</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 8px;">
+                <h3 style="color: var(--white); margin-bottom: 1rem;">⚠️ Challenge 3: Checkout Tracking Broken</h3>
+                <div style="background: var(--white); padding: 1rem; border-radius: 4px;">
+                    <img src="images/meta-checkout-discrepancy.png" alt="Meta showing 43 checkout events vs GA4 showing 18 views" style="width: 100%; height: auto; display: block; border: 1px solid #ddd;">
+                    <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #666; font-style: italic;">Left: Meta shows 43 checkout events | Right: Google Analytics shows only 18 checkout page views - pixel firing multiple times</p>
+                </div>
+                <div style="color: var(--white); margin-top: 1rem;">
+                    <strong>The Issue:</strong>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Meta tracking 2.4X more checkout events than actual page views</li>
+                        <li>Pixel firing multiple times per visit</li>
+                        <li>Purchase events not tracking at all (0 conversions recorded)</li>
+                        <li><strong>Result: Cannot measure true conversion rate or optimize funnel</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 8px;">
+                <h3 style="color: var(--white); margin-bottom: 1rem;">💸 Budget Pacing Issue: Severely Underspending</h3>
+                <div style="color: var(--white);">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 1rem;">
+                        <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px;">
+                            <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">$180K</div>
+                            <div style="font-size: 0.95rem;">Total Budget (Nov-March)</div>
+                            <div style="font-size: 0.75rem; opacity: 0.7; margin-top: 0.25rem;">5 months campaign</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px;">
+                            <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">$36K</div>
+                            <div style="font-size: 0.95rem;">Monthly Target</div>
+                            <div style="font-size: 0.75rem; opacity: 0.7; margin-top: 0.25rem;">To stay on pace</div>
+                        </div>
+                        <div style="background: rgba(255,107,53,0.2); padding: 1.5rem; border-radius: 8px; border: 2px solid var(--red);">
+                            <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--red);">$13K</div>
+                            <div style="font-size: 0.95rem;">Current Monthly Pace</div>
+                            <div style="font-size: 0.75rem; opacity: 0.7; margin-top: 0.25rem;"><strong>Underspending by 64%</strong></div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 1.5rem; font-size: 1rem;">
+                        <strong>The Issue:</strong> At current pace ($13K/month), you'll only spend $65K of $180K budget by March. Meanwhile, tickets are actively on sale and competitors are capturing market share.
+                    </p>
+                </div>
+            </div>
+
+            <div style="background: var(--red); color: var(--white); padding: 2rem; margin-top: 3rem; border-radius: 8px;">
+                <h3 style="margin-bottom: 1rem;">💡 The Bottom Line</h3>
+                <p style="font-size: 1.125rem; line-height: 1.6; margin: 0;">
+                    We're spending <strong>~$13K/month</strong> (should be $36K), getting 20,134 clicks, but <strong>92.3% never reach the page</strong> and <strong>tracking is broken</strong> so Facebook can't optimize. Fix the page speed + implement proper CAPI tracking + scale budget appropriately, and this same traffic converts at 2-3% instead of 0%.
+                </p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 8px; margin-top: 2rem;">
+                <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin: 0;">
+                    <strong>Note:</strong> Replace the placeholder image filenames above with actual screenshots from Meta Ads Manager, Google Analytics, and Events Manager to provide visual proof of these issues to the ATO team.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Solution</div>
+                <h2 style="color: var(--white);">Two-Track Approach: Shared Accountability</h2>
+            </div>
+
+            <h3 style="color: var(--red); margin-top: 3rem;">Track 1: ATO Team Responsibilities (Website & Funnel)</h3>
+
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">⚡</div>
+                    <h4>Fix Page Speed</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Remove heavy background patterns</li>
+                        <li>Compress all images</li>
+                        <li>Defer non-critical JavaScript</li>
+                        <li>Implement lazy loading</li>
+                        <li>Enable CDN & caching</li>
+                    </ul>
+                    <p style="margin-top: 1rem; color: var(--red); font-weight: 600;">Target: <3 second load time</p>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">🎯</div>
+                    <h4>Create Early Bird Landing Page</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Pricing table immediately visible</li>
+                        <li>Countdown to price increase</li>
+                        <li>Clear value stack with numbers</li>
+                        <li>Specific social proof</li>
+                        <li>Simplified checkout</li>
+                    </ul>
+                    <p style="margin-top: 1rem; color: var(--red); font-weight: 600;">Target: 3% conversion rate</p>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">📱</div>
+                    <h4>Fix Visual Design</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>High contrast text (4.5:1 ratio min)</li>
+                        <li>Remove pattern overlays</li>
+                        <li>Simplify color palette</li>
+                        <li>Large, contrasting CTA buttons</li>
+                        <li>Mobile-first approach</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">🛒</div>
+                    <h4>Simplify Checkout</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Single-page checkout (max 2 steps)</li>
+                        <li>Guest checkout option</li>
+                        <li>Clear ticket type selection</li>
+                        <li>Payment plan options</li>
+                        <li>Reduce form friction</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: var(--red); margin-top: 4rem;">Track 2: WeConquer Media Responsibilities (Traffic & Creative)</h3>
+
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">🎨</div>
+                    <h4>Ad Creative Overhaul</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>15 outcome-focused ad variations</li>
+                        <li>Testimonial videos (15-30 sec)</li>
+                        <li>Urgency + FOMO messaging</li>
+                        <li>Speaker credibility highlights</li>
+                        <li>Specific social proof</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">🎯</div>
+                    <h4>Campaign Restructure</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Early Bird urgency campaign</li>
+                        <li>Audience-specific targeting</li>
+                        <li>Aggressive retargeting setup</li>
+                        <li>Ad-to-page matching</li>
+                        <li>UTM tracking implementation</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">⚡</div>
+                    <h4>Performance Monitoring</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Real-time campaign dashboards</li>
+                        <li>Weekly performance reports</li>
+                        <li>Conversion tracking & analytics</li>
+                        <li>Budget pacing & optimization</li>
+                        <li>Rapid issue escalation</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div style="font-size: 2rem;">🔄</div>
+                    <h4>Optimization & Scaling</h4>
+                    <ul style="font-size: 1rem;">
+                        <li>Audience refinement</li>
+                        <li>Creative A/B testing</li>
+                        <li>Retargeting strategy</li>
+                        <li>Performance monitoring</li>
+                        <li>Budget scaling plan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Implementation Timeline</div>
+                <h2>4-Week Roadmap to Results</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 1: Dec 26 - Jan 1</div>
+                    <h4>Foundation & Emergency Fixes</h4>
+                    <ul class="checklist">
+                        <li>Proposal approval & resource allocation (Dec 26)</li>
+                        <li>Page speed optimization complete (Dec 28)</li>
+                        <li>Visual/readability fixes complete (Dec 28)</li>
+                        <li>Early Bird landing page built (Dec 30)</li>
+                        <li>Ad creative production complete (Dec 30)</li>
+                        <li>New landing page live (Dec 31)</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 600;">Expected Impact: LP view rate jumps from 1.4% to 30%+</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 2: Jan 2-8</div>
+                    <h4>Soft Launch & Validation</h4>
+                    <p style="margin-bottom: 1rem;"><strong>Phase 1: Early Bird - Test & Learn</strong></p>
+                    <ul class="checklist">
+                        <li>Verify all tracking is working (Facebook CAPI, Google Ads, GA4)</li>
+                        <li>Launch campaigns at 50% budget (Jan 2-3)</li>
+                        <li>Monitor technical issues and page speed</li>
+                        <li>Scale to 100% budget once validated (Jan 4-5)</li>
+                        <li>Begin retargeting campaigns</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 600;">Goal: 50-75 tickets sold, validate $300-400 CPA is achievable.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 3: Jan 9-15</div>
+                    <h4>Peak Early Bird Push</h4>
+                    <p style="margin-bottom: 1rem;"><strong>Phase 1 Continued: Maximum Urgency</strong></p>
+                    <ul class="checklist">
+                        <li>Daily urgency updates ("Only 5 days left")</li>
+                        <li>Increased retargeting frequency (3-5X per day)</li>
+                        <li>Scarcity messaging ("Only X tickets left")</li>
+                        <li>Creative refresh based on Week 2 learnings</li>
+                        <li>Final 48-hour push (Jan 13-15)</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 600;">Goal: Hit Early Bird allocation target, optimize CPA down to $300-350.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 4-8: Jan 16 - Feb 15</div>
+                    <h4>Standard Pricing Period</h4>
+                    <p style="margin-bottom: 1rem;"><strong>Phase 2: "Price Increase Coming"</strong></p>
+                    <ul class="checklist">
+                        <li>Launch Standard pricing ($997) campaigns</li>
+                        <li>Scale daily budget to $2,000-3,000 (if Early Bird performed well)</li>
+                        <li>Heavy retargeting of Early Bird page visitors</li>
+                        <li>Messaging: "Don't pay $300 more - book by Feb 15"</li>
+                        <li>Leverage Early Bird sellout as social proof</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 600;">Goal: 150-200 tickets at Standard pricing, maintain or improve CPA.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 9+: Feb 16 - March 18</div>
+                    <h4>Final Push - FOMO & Scarcity</h4>
+                    <p style="margin-bottom: 1rem;"><strong>Phase 3: "Event Approaching - Tickets Selling Out"</strong></p>
+                    <ul class="checklist">
+                        <li>Regular pricing ($1,297) - maximize scarcity messaging</li>
+                        <li>Event countdown (X days until March 18-19)</li>
+                        <li>Real-time ticket availability if possible</li>
+                        <li>Speaker reveals and agenda announcements</li>
+                        <li>Attendee testimonials and excitement content</li>
+                        <li>Create waitlist once sold out (generates FOMO)</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 600;">Goal: Sell remaining inventory, fill any gaps from cancellations, build excitement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accountability -->
+    <section class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Accountability Framework</div>
+                <h2>Clear Ownership, Measurable Results</h2>
+            </div>
+
+            <h3 style="margin-top: 2rem;">ATO Team Deliverables</h3>
+            
+            <div style="background: #FFF3CD; border: 3px solid #FFB800; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                <h4 style="color: #856404; margin-bottom: 0.75rem;">⚠️ CRITICAL: Tracking Must Be Set Up BEFORE Landing Page Delivery</h4>
+                <p style="color: #856404; margin: 0; font-weight: 600;">All conversion tracking MUST be implemented and verified before WeConquer receives the landing page. LP1 was delivered without tracking, causing wasted spend and inability to optimize.</p>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Deliverable</th>
+                            <th>Deadline</th>
+                            <th>Success Metric</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #FFF3CD;">
+                            <td><strong>Facebook Pixel + CAPI setup</strong></td>
+                            <td><strong>Jan 2</strong></td>
+                            <td><strong>CAPI events firing correctly, Event Quality Score >7</strong></td>
+                        </tr>
+                        <tr style="background: #FFF3CD;">
+                            <td><strong>Google Ads conversion tracking</strong></td>
+                            <td><strong>Jan 2</strong></td>
+                            <td><strong>Purchase event tracking in Google Ads</strong></td>
+                        </tr>
+                        <tr style="background: #FFF3CD;">
+                            <td><strong>Fix GA4/Meta data discrepancy</strong></td>
+                            <td><strong>Jan 2</strong></td>
+                            <td><strong>Page view counts align within 10% variance</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Early Bird landing page live</td>
+                            <td>Jan 3</td>
+                            <td>LP exists, pricing visible, single-click to checkout</td>
+                        </tr>
+                        <tr>
+                            <td>Visual/readability fixes</td>
+                            <td>Jan 3</td>
+                            <td>Contrast ratio >4.5:1, patterns removed</td>
+                        </tr>
+                        <tr>
+                            <td>Page speed optimization</td>
+                            <td>Jan 6</td>
+                            <td>PageSpeed score >80, <3 sec load time</td>
+                        </tr>
+                        <tr>
+                            <td>Simplified checkout flow</td>
+                            <td>Jan 8</td>
+                            <td>Single-click to checkout, <2 steps total</td>
+                        </tr>
+                        <tr>
+                            <td>Exit-intent popup</td>
+                            <td>Jan 10</td>
+                            <td>Popup triggers, email capture working</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: var(--gray-light); padding: 2rem; margin-top: 2rem; border-left: 4px solid var(--black);">
+                <h4 style="margin-bottom: 1rem;">Required Tracking Setup (MUST BE COMPLETE BEFORE LAUNCH):</h4>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <h5 style="margin-bottom: 0.5rem;">1. Facebook Conversions API (CAPI):</h5>
+                    <ul style="margin-left: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;">Server-side tracking implemented (not just browser pixel)</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>ViewContent</strong> event: Fires when landing page loads</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>InitiateCheckout</strong> event: Fires when user clicks "Buy Tickets"</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Purchase</strong> event: Fires on order confirmation with transaction value</li>
+                        <li style="margin-bottom: 0.5rem;">Event Quality Score > 7 in Meta Events Manager</li>
+                        <li style="margin-bottom: 0.5rem;">Proper event parameters sent (value, currency, content_ids)</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h5 style="margin-bottom: 0.5rem;">2. Google Ads Conversion Tracking:</h5>
+                    <ul style="margin-left: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Google Ads Account</strong> set up and linked to website</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Google Tag Manager (GTM)</strong> installed on website/app to fire tracking code</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Purchase conversion action</strong> defined in Google Ads</li>
+                        <li style="margin-bottom: 0.5rem;">GTM trigger configured for purchase confirmation page</li>
+                        <li style="margin-bottom: 0.5rem;">Conversion tag firing correctly on test purchases</li>
+                        <li style="margin-bottom: 0.5rem;">Transaction value being passed to Google Ads</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h5 style="margin-bottom: 0.5rem;">3. Google Analytics 4 (GA4):</h5>
+                    <ul style="margin-left: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;">Event tracking configured with transaction data</li>
+                        <li style="margin-bottom: 0.5rem;">Purchase events recording with order value</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Fix GA4/Meta discrepancy:</strong> Currently showing 3X difference in page view counts</li>
+                        <li style="margin-bottom: 0.5rem;">Numbers must align within 10% variance between GA4 and Meta</li>
+                    </ul>
+                </div>
+
+                <div style="background: #FFF3CD; border: 2px solid #FFB800; padding: 1.5rem; border-radius: 4px; margin-top: 1.5rem;">
+                    <p style="margin: 0; font-weight: 600; color: #856404;">
+                        <strong>Verification Required:</strong> ATO must provide screenshots of test purchases showing successfully in BOTH Meta Events Manager AND Google Ads before WeConquer launches campaigns. Without proper tracking, we cannot optimize campaigns or measure true ROI.
+                    </p>
+                </div>
+            </div>
+
+            <p style="margin-top: 1rem;"><strong>Minimum Performance Target:</strong> Landing page CPA of $300-400 (realistic for conference tickets)</p>
+
+            <h3 style="margin-top: 3rem;">WeConquer Media Deliverables</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Deliverable</th>
+                            <th>Deadline</th>
+                            <th>Success Metric</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>New ad creative (15 variations)</td>
+                            <td>Jan 3</td>
+                            <td>Ads approved and in review</td>
+                        </tr>
+                        <tr>
+                            <td>Campaign restructure</td>
+                            <td>Jan 4</td>
+                            <td>New campaigns live and delivering</td>
+                        </tr>
+                        <tr>
+                            <td>Retargeting campaigns launched</td>
+                            <td>Jan 5</td>
+                            <td>Pixels firing, audiences building</td>
+                        </tr>
+                        <tr>
+                            <td>Performance monitoring dashboard</td>
+                            <td>Jan 5</td>
+                            <td>Real-time tracking active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top: 1rem;"><strong>Minimum Performance Target:</strong> Maintain 2%+ CTR, keep CPC below current benchmarks, deliver 30%+ LP view rate</p>
+
+            <p style="margin-top: 2rem; padding: 1.5rem; background: var(--gray-light); border-left: 4px solid var(--black);"><strong>Note on Scope:</strong> WeConquer is responsible for ad creative, media buying, and traffic delivery only. All landing page copy, design, and website optimization is ATO's responsibility. Website copywriting services are available as a separate paid engagement.</p>
+
+            <div class="highlight-box" style="margin-top: 3rem;">
+                <h4>The Harsh Truth: Who Owns What</h4>
+                <p><strong style="color: var(--red);">If conversions don't improve after ATO fixes:</strong> It's on WeConquer. If the landing page converts at 3%+ but we're not driving quality traffic, we own that problem.</p>
+                <p><strong style="color: var(--red);">If conversions don't improve after WeConquer fixes:</strong> It's on ATO. If we're driving 2%+ CTR with quality traffic to a fast-loading, clear LP and it's still not converting, ATO needs to address pricing, value proposition, or product-market fit.</p>
+                <p><strong>Shared Responsibility:</strong> Weekly conversion analysis calls, real-time dashboard access, transparent data sharing, rapid testing and iteration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Projection -->
+    <section class="section-accent">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">ROI Projection</div>
+                <h2 style="color: var(--white);">Early Bird Period: 300 Tickets Target</h2>
+                <p style="color: rgba(255,255,255,0.9);">Realistic expectations based on conference ticket marketing benchmarks</p>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.3); padding: 2.5rem; margin: 2rem 0; border: 2px solid var(--white);">
+                <h3 style="color: var(--white); margin-bottom: 1.5rem;">Recommended Budget: $1,500/Day (Jan 1-15)</h3>
+                <p style="color: var(--white); margin-bottom: 2rem; font-size: 1rem;">Conference ticket marketing typically sees $300-500 CPA. We're setting realistic expectations.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; color: var(--white);">
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">$22,500</div>
+                        <div>Total Early Bird Budget</div>
+                        <div style="font-size: 0.875rem; opacity: 0.8; margin-top: 0.5rem;">15 days at $1,500/day</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">225,000</div>
+                        <div>Estimated Clicks</div>
+                        <div style="font-size: 0.875rem; opacity: 0.8; margin-top: 0.5rem;">At $0.10 CPC average</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">67,500</div>
+                        <div>Landing Page Views</div>
+                        <div style="font-size: 0.875rem; opacity: 0.8; margin-top: 0.5rem;">30% rate (after page speed fix)</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">$300-400</div>
+                        <div>Expected CPA</div>
+                        <div style="font-size: 0.875rem; opacity: 0.8; margin-top: 0.5rem;">Industry standard for conferences</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 2.5rem; margin: 2rem 0;">
+                <h3 style="color: var(--white); margin-bottom: 1.5rem;">Conservative Scenario ($400 CPA)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; color: var(--white);">
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">56</div>
+                        <div>Tickets Sold</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">$44,632</div>
+                        <div>Revenue at $797/ticket</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">2:1</div>
+                        <div>Return on Ad Spend</div>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">Still profitable, room for optimization</p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.15); padding: 2.5rem; margin: 2rem 0;">
+                <h3 style="color: var(--white); margin-bottom: 1.5rem;">Target Scenario ($350 CPA)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; color: var(--white);">
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">64</div>
+                        <div>Tickets Sold</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">$51,008</div>
+                        <div>Revenue at $797/ticket</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">2.3:1</div>
+                        <div>Return on Ad Spend</div>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">Achievable with optimized funnel and creative</p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.2); padding: 2.5rem; margin: 2rem 0;">
+                <h3 style="color: var(--white); margin-bottom: 1.5rem;">Best Case Scenario ($300 CPA)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; color: var(--white);">
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">75</div>
+                        <div>Tickets Sold</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">$59,775</div>
+                        <div>Revenue at $797/ticket</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--white);">2.7:1</div>
+                        <div>Return on Ad Spend</div>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">Requires perfect execution from both teams</p>
+            </div>
+
+            <div style="background: var(--black); padding: 2rem; margin: 3rem 0; border: 2px solid var(--white);">
+                <h4 style="color: var(--white); margin-bottom: 1rem;">Scaling Plan Post-Early Bird:</h4>
+                <p style="font-size: 1.125rem; color: var(--white); margin: 0;">Once we validate what's working during Early Bird (Jan 1-15) and pixels are tracking properly, we'll scale to $2,000-3,000/day for Standard pricing period (Jan 16 - March 18) to hit the 300 total ticket target.</p>
+            </div>
+
+            <p style="font-size: 1rem; margin-top: 2rem; color: var(--white); opacity: 0.9;">*Projections assume: (1) Page speed fixed to achieve 30% LP view rate, (2) Proper Facebook CAPI + conversion tracking implemented, (3) Qualified traffic targeting affiliates/media buyers</p>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Next Steps</div>
+                <h2>Let's Get This Done</h2>
+            </div>
+
+            <div class="cta-box">
+                <h3 style="color: var(--white);">Current Reality</h3>
+                <div class="big-number">$867/day</div>
+                <p style="font-size: 1.25rem; margin: 1rem 0;">Getting 0 conversions. Burning money.</p>
+            </div>
+
+            <div style="text-align: center; margin: 2rem 0; font-size: 3rem; color: var(--red);">
+                ↓
+            </div>
+
+            <div class="cta-box" style="background: var(--red);">
+                <h3 style="color: var(--white);">After Fixes</h3>
+                <div class="big-number" style="color: var(--white);">$867/day</div>
+                <p style="font-size: 1.25rem; margin: 1rem 0;">Getting 30-120 conversions. Printing money.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 3rem;">
+                <h4>The Difference?</h4>
+                <ul class="checklist">
+                    <li>3 days of focused work</li>
+                    <li>Clear accountability</li>
+                    <li>Both teams executing</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 3rem;">Immediate Actions Required from ATO:</h3>
+            <ol>
+                <li>Approve this proposal</li>
+                <li>Assign dev/design resources with specific availability</li>
+                <li>Confirm Early Bird ticket allocation (recommended: 300 tickets)</li>
+                <li>Grant WeConquer access to Google Analytics 4, heatmap tools (if existing), staging environment</li>
+            </ol>
+
+            <h3 style="margin-top: 2rem;">Immediate Actions from WeConquer:</h3>
+            <ol>
+                <li>Begin ad creative production (15 variations)</li>
+                <li>Prepare campaign structure for $1,500/day budget</li>
+                <li>Set up retargeting audiences</li>
+                <li>Configure performance tracking dashboard</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Footer Contact -->
+    <div style="background: var(--black); color: var(--white); padding: 3rem 0; text-align: center;">
+        <div class="container">
+            <h3 style="color: var(--white); margin-bottom: 1rem;">Questions or Ready to Move Forward?</h3>
+            <p style="color: var(--gray-light); font-size: 1.125rem; margin-bottom: 1.5rem;">Let's schedule a call to align on next steps and timelines.</p>
+            
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--gray-dark);">
+                <p style="color: var(--gray-light);">WeConquer Media — Performance Marketing That Delivers Results</p>
+                <p style="color: var(--gray-medium); font-size: 0.875rem; margin-top: 0.5rem;">Over $1 Billion Generated For Our Clients</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
